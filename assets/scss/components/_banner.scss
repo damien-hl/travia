@@ -1,0 +1,126 @@
+section.banner {
+  min-height: 690px;
+  height: 70vh;
+  display: flex;
+  background-image: url("../images/david-marcu-78A265wPiO4-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: 992px) {
+    background-position: left 100px center;
+  }
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    background-position: left 75px center;
+  }
+
+  @media (max-width: 575.98px) {
+    flex-direction: column-reverse;
+    background-position: left 0% center;
+  }
+
+  .banner-social {
+    padding-bottom: 1.2rem;
+    align-self: flex-end;
+    flex: 0 0 100px;
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      flex: 0 0 75px;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 1rem 0.5rem;
+      align-self: center;
+      flex: 0 0 auto;
+      display: flex;
+    }
+
+    .social-link {
+      margin: 1.2rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      line-height: 1;
+      transition: background-color 500ms ease, border-color 500ms ease;
+
+      &:focus {
+        background-color: darken($primary, 2.5);
+        border-color: $primary;
+      }
+
+      &:hover {
+        background-color: $primary;
+        border-color: $primary;
+      }
+
+      @media (max-width: 575.98px) {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  .banner-hero {
+    margin-top: auto;
+    padding: 0 0 8rem 120px;
+    flex: 1 1 auto;
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      padding: 0 4rem 8rem;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-top: 0;
+      padding: 0 1rem;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1.title {
+      margin: 0 0 2rem;
+      max-width: 480px;
+      font-family: $font-family-serif;
+      font-size: 5.5rem;
+      line-height: 1;
+      letter-spacing: 1px;
+
+      @media (max-width: 575.98px) {
+        font-size: 4.5rem;
+      }
+    }
+
+    p.subtitle {
+      margin-bottom: 2rem;
+      max-width: 680px;
+      font-size: 1rem;
+      line-height: 1.75rem;
+
+      @media (max-width: 575.98px) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    button.cta {
+      padding: 1rem 2rem;
+      white-space: nowrap;
+      font-size: 1rem;
+      transition: background-color 200ms ease;
+
+      &:focus {
+        background-color: darken($primary, 2.5);
+      }
+
+      &:hover {
+        background-color: darken($primary, 5);
+      }
+    }
+  }
+}

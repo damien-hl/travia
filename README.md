@@ -27,6 +27,8 @@ yarn serve
 ## Libraries used
 
 - [Vite](https://vitejs.dev/)
+- [Sass](https://sass-lang.com/)
+- [Normalize.css](https://necolas.github.io/normalize.css/)
 
 ## Meta
 

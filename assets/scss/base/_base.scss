@@ -1,0 +1,33 @@
+body {
+  font-family: $font-family-sans-serif;
+  background-color: $body-bg;
+  font-size: 16px;
+  color: $body-color;
+  box-sizing: border-box;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+
+  &:focus {
+    outline: none;
+    border: initial;
+  }
+}
+
+button {
+  background-color: $primary;
+  border: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.20);
+  color: inherit;
+  cursor: pointer;
+}
