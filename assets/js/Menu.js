@@ -25,6 +25,7 @@ export class Menu {
     }
     this.mobileMql.addEventListener('change', offClick);
     document.addEventListener('click', offClick);
+    // TODO add escape key listener
   }
 
   onClick(event) {
@@ -34,11 +35,11 @@ export class Menu {
         this.navMenu.setAttribute('aria-expanded', 'true');
 
         setTimeout(() => {
-          this.app.classList.add('open');
+          this.app.classList.add('menu-is-open');
         }, 25);
 
       } else {
-        this.app.classList.remove('open')
+        this.app.classList.remove('menu-is-open')
 
         setTimeout(() => {
           this.navMenu.setAttribute('aria-expanded', 'false');
@@ -48,7 +49,7 @@ export class Menu {
       }
     }
 
-    if (!this.app.classList.contains('open')) {
+    if (!this.app.classList.contains('menu-is-open')) {
       toggleMenu({ open: true })
       this.addOffClick(event, toggleMenu);
     }

@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travia - Get ready for next trip</title>
-  <meta name="description" content="We are the fastest, most affordable virtual assistant service in the US. No negotiating, no working, just send us your requests and we'll get to work immediately">
+  <meta name="description"
+    content="We are the fastest, most affordable virtual assistant service in the US. No negotiating, no working, just send us your requests and we'll get to work immediately">
 </head>
 
 <body>
@@ -48,15 +49,34 @@
             your requests and we'll get to work immediately</p>
           <button class="cta">Book trip</button>
         </div>
-      </section> <!-- /section -->
+        <div class="banner-video">
+          <button id="modal-video-open" aria-label="Open the video modal" class="play-btn">
+            <span aria-hidden="true" class="triangle"></span>
+          </button>
+          <div class="video-text">
+            <span class="watch">watch</span>
+            Intro video
+          </div>
+          <!--  -->
+        </div>
+      </section> <!-- /section.banner -->
+
+      <section class="section highlights">
+
+      </section>
 
     </main> <!-- /main -->
 
     <footer class="app-footer"></footer> <!-- /footer -->
 
-  </div> <!-- /app -->
+    <div id="modal-video" class="modal-video">
+      <video controls class="video">
+        <source src="/sample.mp4" type="video/mp4">
+        <p>Your browser doesn't support HTML5 videos. Here is <a href="/sample.mp4">a link to download it</a>.</p>
+      </video>
+    </div>
 
-
+  </div> <!-- /#app -->
 
   <script type="module" src="/main.js"></script>
 </body>

@@ -1,26 +1,21 @@
 #app {
   &::before {
     content: "";
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: -1;
-    background-color: black;
     opacity: 0;
-    transition: opacity 500ms;
-
-    @media (max-width: 991.98px) {
-     display: block;
-    }
+    transition: opacity 500ms ease;
   }
 
-  &.open {
+  &.menu-is-open {
     &::before {
       z-index: 1950;
       opacity: 0.25;
+      background-color: black;
     }
 
     nav.nav-menu {

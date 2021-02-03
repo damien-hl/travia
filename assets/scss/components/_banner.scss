@@ -1,6 +1,7 @@
 section.banner {
   min-height: 690px;
   height: 70vh;
+  position: relative;
   display: flex;
   background-image: url("../images/david-marcu-78A265wPiO4-unsplash.jpg");
   background-size: cover;
@@ -29,6 +30,7 @@ section.banner {
     }
 
     @media (max-width: 575.98px) {
+      margin-bottom: 3.5rem;
       padding: 1rem 0.5rem;
       align-self: center;
       flex: 0 0 auto;
@@ -120,6 +122,89 @@ section.banner {
 
       &:hover {
         background-color: darken($primary, 5);
+      }
+    }
+  }
+
+  .banner-video {
+    padding: 2rem 3rem;
+    position: absolute;
+    bottom: calc((5.5rem + 4rem) / -2);
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+
+    @media (max-width: 575.98px) {
+      padding: 1.5rem 2rem;
+      justify-content: center;
+      bottom: calc((3.5rem + 3rem) / -2);
+      width: calc(100% - 2rem);
+      right: 1rem;
+      left: 1rem;
+    }
+
+    .play-btn {
+      margin-right: 2rem;
+      flex: 1 0 5.5rem;
+      width: 5.5rem;
+      height: 5.5rem;
+      position: relative;
+      background-color: $primary;
+      border-radius: 50%;
+      transition: background-color 200ms ease;
+
+      &:focus {
+        background-color: darken($primary, 2.5);
+      }
+
+      &:hover {
+        background-color: darken($primary, 5);
+      }
+
+      @media (max-width: 575.98px) {
+        margin-right: 1.5rem;
+        flex: 0 0 3.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      .triangle {
+        display: inline-block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-top: 0.6rem solid transparent;
+        border-bottom: 0.6rem solid transparent;
+        border-left: 0.9rem solid #ffffff;
+
+        @media (max-width: 575.98px) {
+          border-top-width: 0.4rem;
+          border-bottom-width: 0.4rem;
+          border-left-width: 0.7rem;
+        }
+      }
+    }
+
+    .video-text {
+      line-height: 1.75rem;
+      font-weight: 500;
+      color: #000000;
+
+      @media (max-width: 575.98px) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+
+      .watch {
+        display: block;
+        font-weight: 400;
+        color: #6e6e6e;
       }
     }
   }

@@ -12,9 +12,11 @@ import './assets/scss/main.scss'
 
 // JavaScript
 import { Menu } from './assets/js/Menu'
+import { Modal } from './assets/js/Modal'
 
 document.addEventListener('DOMContentLoaded', () => {
 
   new Menu();
+  new Modal();
 
 });

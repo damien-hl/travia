@@ -20,7 +20,6 @@ a {
 
   &:focus {
     outline: none;
-    border: initial;
   }
 }
 
@@ -30,4 +29,8 @@ button {
   box-shadow: 0 0 20px rgba(0,0,0,0.20);
   color: inherit;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
