@@ -62,15 +62,40 @@
       </section> <!-- /section.banner -->
 
       <section class="section highlights">
-
+        <div class="container">
+          <div class="highlights-title">
+            <p class="category">
+              <a href="#" class="category-link">Lorem ipsum dummy text</a>
+            </p>
+            <h2 class="title">Get your right time back</h2>
+            <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium animi quas quidem
+              vel.</p>
+            <p class="emphasis">Lorem ipsum dolor sit amet consectetur.</p>
+            <ul class="tags">
+              <li class="tag">
+                <a href="#" class="tag-link">
+                  <span aria-hidden="true" class="creativity"></span>
+                  Lorem ipsum
+                </a>
+              </li>
+              <li class="tag">
+                <a href="#" class="tag-link">
+                  <span aria-hidden="true" class="ideas"></span>
+                  Lorem ipsum
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="highlights-images"></div>
+        </div>
       </section>
 
     </main> <!-- /main -->
 
     <footer class="app-footer"></footer> <!-- /footer -->
 
-    <div id="modal-video" class="modal-video">
-      <video controls class="video">
+    <div id="modal-video" role="dialog" aria-labelledby="Video modal" aria-hidden="true" class="modal-video">
+      <video controls role="document" class="video">
         <source src="/sample.mp4" type="video/mp4">
         <p>Your browser doesn't support HTML5 videos. Here is <a href="/sample.mp4">a link to download it</a>.</p>
       </video>

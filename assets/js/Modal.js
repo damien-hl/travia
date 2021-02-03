@@ -31,6 +31,7 @@ export class Modal {
       if (open) {
         document.body.classList.add('no-scroll');
         this.modal.classList.add('is-visible');
+        this.modal.setAttribute('aria-hidden', 'false');
 
         setTimeout(() => {
           this.app.classList.add('modal-is-open');
@@ -42,6 +43,7 @@ export class Modal {
         this.video.pause();
 
         setTimeout(() => {
+          this.modal.setAttribute('aria-hidden', 'true');
           this.modal.classList.remove('is-visible');
           document.body.classList.remove('no-scroll')
         }, 500);
