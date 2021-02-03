@@ -195,6 +195,7 @@ section.banner {
       line-height: 1.75rem;
       font-weight: 500;
       color: #000000;
+      text-shadow: 0 0 2px rgba(0,0,0,0.1);
 
       @media (max-width: 575.98px) {
         font-size: 0.9rem;
@@ -205,6 +206,7 @@ section.banner {
         display: block;
         font-weight: 400;
         color: #6e6e6e;
+        text-shadow: none;
       }
     }
   }

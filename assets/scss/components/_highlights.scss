@@ -1,11 +1,17 @@
 section.highlights {
-  padding-top: 5.5rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
   min-height: 100vh;
   background-color: $body-light-theme-bg;
   color: $body-light-theme-color;
 
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
   @media (max-width: 575.98px) {
-    padding-top: 3.5rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .container {
@@ -16,11 +22,11 @@ section.highlights {
     display: flex;
 
     @media (min-width: 576px) and (max-width: 991.98px) {
-      display: block;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 575.98px) {
-      display: block;
+      flex-wrap: wrap;
     }
   }
 
@@ -28,6 +34,18 @@ section.highlights {
     width: 100%;
     flex: 0 0 35%;
     align-self: flex-end;
+
+    @media (min-width: 992px) {
+      padding-right: 0.5rem;
+    }
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      flex: 1 0 100%;
+    }
+
+    @media (max-width: 575.98px) {
+      flex: 1 0 100%;
+    }
 
     p.category {
       @media (max-width: 575.98px) {
@@ -42,7 +60,7 @@ section.highlights {
         color: $primary;
 
         @media (max-width: 575.98px) {
-        font-size: 0.9rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -82,7 +100,7 @@ section.highlights {
     p.emphasis {
       font-size: 1rem;
       font-weight: 500;
-      text-shadow: 0 0 2px rgba(0,0,0,0.25);
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
       @media (max-width: 575.98px) {
         font-size: 0.9rem;
@@ -95,7 +113,7 @@ section.highlights {
       padding: 0;
       list-style: none;
       display: flex;
-      
+
       @media (max-width: 575.98px) {
         justify-content: center;
       }
@@ -107,6 +125,9 @@ section.highlights {
         color: #999999;
 
         @media (max-width: 575.98px) {
+          margin-right: 1.5rem;
+          margin-left: 1.5rem;
+          margin-bottom: 1rem;
           font-size: 0.9rem;
         }
 
@@ -132,10 +153,137 @@ section.highlights {
   }
 
   .highlights-images {
-    outline: 1px solid blue;
     width: 100%;
-    height: 700px;
     flex: 0 0 65%;
     align-self: stretch;
+    display: flex;
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      flex: 1 0 100%;
+    }
+
+    @media (max-width: 575.98px) {
+      flex: 1 0 100%;
+      flex-direction: column;
+    }
+
+    .block-left {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 575.98px) {
+        flex: 1 0 500px;
+      }
+
+      .legend {
+        margin: 2rem 3rem 2rem 0;
+        padding-left: 1rem;
+        border-left: 2px solid $body-light-theme-color;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 575.98px) {
+          font-size: 0.9rem;
+        }
+      }
+
+      .image-container {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
+
+        .background-image {
+          width: 100%;
+          height: 100%;
+          background-image: url("../images/didin-emelu-8--kuxbxuKU-unsplash.jpg");
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          transition: all 500ms;
+
+          &:hover, &:focus {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    .block-right {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      @media (max-width: 575.98px) {
+        flex: 1 0 500px;
+      }
+
+      .text {
+        padding: 1.75rem 2rem;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.75);
+
+        .title {
+          font-size: 1.2rem;
+          font-weight: 600;
+          text-transform: uppercase;
+
+          @media (max-width: 575.98px) {
+            font-size: 1rem;
+          }
+        }
+
+        .excerpt {
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.25rem;
+
+          @media (max-width: 575.98px) {
+            font-size: 0.9rem;
+          }
+        }
+
+        .emphasis {
+          font-size: 1rem;
+          font-weight: 500;
+          text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+          @media (max-width: 575.98px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .image-container {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+
+        @media (max-width: 575.98px) {
+          height: 100%;
+        }
+
+        .background-image {
+          width: 100%;
+          height: 700px;
+          background-image: url("../images/etienne-boulanger-C5yfbvMWxC8-unsplash.jpg");
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          transition: all 500ms;
+
+          &:hover, &:focus {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
   }
 }
