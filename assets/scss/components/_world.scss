@@ -123,6 +123,7 @@ section.world {
       margin-bottom: 2.5rem;
       width: 100%;
       min-height: 680px;
+      height: 680px;
       flex: 0 0 520px;
       position: relative;
       z-index: 1;
@@ -137,6 +138,7 @@ section.world {
         margin: 0 auto 2.5rem;
         width: calc(100% - 3rem);
         min-height: 380px;
+        height: 380px;
       }
 
       .background-image {
