@@ -1,0 +1,209 @@
+section.world {
+  min-height: 650px;
+  position: relative;
+  background-color: $body-light-theme-bg;
+
+  .map {
+    height: 640px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    background-color: $body-bg;
+    background-image: url("../images/world_map.png");
+    background-size: 1400px;
+    background-repeat: repeat-x;
+    background-position: right center;
+
+    @media (max-width: 991.98px) {
+      background-position: center center;
+    }
+
+    .plane {
+      width: 58px;
+      height: 50px;
+      position: absolute;
+      top: 54px;
+      right: calc(100% - 975px);
+      background-image: url("../images/plane.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;  
+      transform: rotate(70deg);
+
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+    }
+
+    .trail {
+      width: 500px;
+      height: 200px;
+      position: absolute;
+      top: 30px;
+      right: calc(100% - 925px);
+      background-image: url("../images/trail.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center; 
+
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+    }
+
+    .pin {
+      width: 24px;
+      height: 32px;
+      position: absolute;
+      background-image: url("../images/pin.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;  
+
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+
+      &.sweden {
+        top: 50px;
+        left: calc(100% - 770px);
+      }
+
+      &.africa-1 {
+        top: 275px;
+        left: calc(100% - 870px);
+      }
+
+      &.africa-2 {
+        top: 500px;
+        left: calc(100% - 700px);
+      }
+
+      &.thailand {
+        top: 290px;
+        left: calc(100% - 350px);
+      }
+
+      &.russia-1 {
+        top: 90px;
+        left: calc(100% - 400px);
+      }
+
+      &.russia-2 {
+        top: 50px;
+        left: calc(100% - 375px);
+      }
+
+      &.russia-3 {
+        top: 40px;
+        left: calc(100% - 200px);
+      }
+
+      &.australia {
+        top: 500px;
+        left: calc(100% - 225px);
+      }
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1400px;
+    display: flex;
+
+    @media (max-width: 991.98px) {
+      flex-direction: column-reverse;
+    }
+
+    .image-container {
+      margin-top: 4rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
+      min-height: 680px;
+      flex: 0 0 520px;
+      position: relative;
+      z-index: 1;
+
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        margin: 0 auto 2.5rem;
+        width: calc(100% - 5rem);
+        max-width: 580px;
+      }
+    
+      @media (max-width: 575.98px) {
+        margin: 0 auto 2.5rem;
+        width: calc(100% - 3rem);
+        min-height: 380px;
+      }
+
+      .background-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url("../images/kevin-wolf-IfTKequW2Mk-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+    
+        @media (max-width: 575.98px) {
+          background-position: center center;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2.5rem;
+          bottom: -2.5rem;
+          right: -2.5rem;
+          left:  2.5rem;
+          z-index: -1;
+          background-color: $primary;
+    
+          @media (max-width: 575.98px) {
+            top: 1.5rem;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            left:  1.5rem;
+          }
+        }
+      }
+    }
+  
+    .stats {
+      margin: 150px auto 0;
+      flex: 0 0 auto;
+      position: relative;
+      z-index: 1;
+
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        margin: 50px auto;
+      }
+    
+      @media (max-width: 575.98px) {
+        margin: 25px auto;
+      }
+
+      .number {
+        margin: 0;
+        font-size: 3.25rem;
+        line-height: 1;
+    
+        @media (max-width: 575.98px) {
+          font-size: 3rem;
+        }
+      }
+
+      .text {
+        font-size: 1rem;
+        line-height: 1;
+    
+        @media (max-width: 575.98px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
