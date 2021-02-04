@@ -1,0 +1,225 @@
+section.trips {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: $body-light-theme-bg;
+  color: $body-light-theme-color;
+
+  .container {
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 575.98px) {
+      flex-wrap: wrap;
+    }
+
+    .trips-title {
+      width: 100%;
+      flex: 0 0 35%;
+
+      @media (min-width: 992px) {
+        padding-right: 0.5rem;
+      }
+
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        flex: 1 0 100%;
+      }
+
+      @media (max-width: 575.98px) {
+        flex: 1 0 100%;
+      }
+
+      p.category {
+        @media (max-width: 575.98px) {
+          text-align: center;
+        }
+
+        a.category-link {
+          padding-bottom: 0.25rem;
+          border-bottom: 2px solid $primary;
+          font-size: 1rem;
+          font-weight: 600;
+          color: $primary;
+
+          @media (max-width: 575.98px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      h2.title {
+        font-family: $font-family-serif;
+        font-size: 3.4rem;
+        font-weight: 700;
+        line-height: 3.4rem;
+
+        @media (max-width: 575.98px) {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+
+      p.excerpt {
+        margin-bottom: 2rem;
+        max-width: 80%;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        color: #6e6e6e;
+
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          padding-right: 7rem;
+        }
+
+        @media (max-width: 575.98px) {
+          margin: 0 auto 2rem;
+          padding-right: 0;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+
+      p.emphasis {
+        font-size: 1rem;
+        font-weight: 500;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 575.98px) {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+
+      button.cta {
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        white-space: nowrap;
+        font-size: 1rem;
+        color: $body-color;
+        transition: background-color 200ms ease;
+
+        @media (max-width: 575.98px) {
+          margin: 2rem auto;
+          display: block;
+        }
+
+        &:focus {
+          background-color: darken($primary, 2.5);
+        }
+
+        &:hover {
+          background-color: darken($primary, 5);
+        }
+      }
+    }
+
+    ul.trips-list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      list-style: none;
+
+      .trip {
+        margin: 1rem;
+        width: 364px;
+        flex: 0 0 calc(50% - 2rem);
+        background-color: #ffffff;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          margin: 1rem 0;
+          flex: 0 0 calc(50% - 1rem);
+        }
+
+        @media (max-width: 575.98px) {
+          margin: 1rem 0;
+          flex: 0 0 100%;
+        }
+
+        &:hover,
+        &:focus {
+          .trip-image {
+            transform: scale(1.2);
+          }
+        }
+
+        &:nth-child(1) {
+          .trip-image {
+            background-image: url("../images/hedi-benyounes-yo6EVHz7oWw-unsplash.jpg");
+          }
+        }
+
+        &:nth-child(2) {
+          .trip-image {
+            background-image: url("../images/luca-bravo-ESkw2ayO2As-unsplash.jpg");
+          }
+        }
+
+        &:nth-child(3) {
+          .trip-image {
+            background-image: url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+          }
+        }
+
+        &:nth-child(4) {
+          .trip-image {
+            background-image: url("../images/david-marcu-78A265wPiO4-unsplash.jpg");
+          }
+        }
+
+        .trip-image-container {
+          width: 100%;
+          height: 220px;
+          overflow: hidden;
+
+          .trip-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: transform 500ms;
+            will-change: transform;
+          }
+        }
+
+        .trip-infos {
+          padding: 1rem 2rem 3rem;
+
+          p.trip-title {
+            margin-top: 0.5rem;
+            font-family: $font-family-serif;
+            font-size: 1.3rem;
+            line-height: 1.5;
+          }
+
+          a.trip-link {
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid $body-light-color;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $body-light-color;
+            transition: color 200ms ease, border-color 200ms ease;
+
+            @media (max-width: 575.98px) {
+              font-size: 0.9rem;
+            }
+            &:hover,
+            &:focus {
+              border-color: $primary;
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

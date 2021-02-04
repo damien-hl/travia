@@ -20,4 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   new Menu();
   new Modal();
 
+  window.addEventListener('scroll', () => {
+    let y = window.pageYOffset / 4;
+    document.querySelector('section.banner').style.backgroundPositionY = 'calc(50% - ' + y + 'px)'
+  })
+
 });

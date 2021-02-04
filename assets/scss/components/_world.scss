@@ -24,13 +24,18 @@ section.world {
       width: 58px;
       height: 50px;
       position: absolute;
-      top: 54px;
-      right: calc(100% - 975px);
+      top: 104px;
+      right: calc(100% - 1075px);
       background-image: url("../images/plane.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;  
       transform: rotate(70deg);
+
+      @media (max-width: 1399.98px) {
+        top: 104px;
+        right: calc(100% - 875px);
+      }
 
       @media (max-width: 991.98px) {
         display: none;
@@ -41,12 +46,17 @@ section.world {
       width: 500px;
       height: 200px;
       position: absolute;
-      top: 30px;
-      right: calc(100% - 925px);
+      top: 80px;
+      right: calc(100% - 1025px);
       background-image: url("../images/trail.svg");
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: center center; 
+      background-position: center center;
+
+      @media (max-width: 1399.98px) {
+        top: 84px;
+        right: calc(100% - 820px);
+      } 
 
       @media (max-width: 991.98px) {
         display: none;
@@ -175,7 +185,7 @@ section.world {
     }
   
     .stats {
-      margin: 150px auto 0;
+      margin: 180px auto 0;
       flex: 0 0 auto;
       position: relative;
       z-index: 1;
