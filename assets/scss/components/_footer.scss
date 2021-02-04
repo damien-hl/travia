@@ -18,12 +18,7 @@ footer.app-footer {
     margin-right: 4rem;
     flex: 0 0 50%;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      margin-right: 0;
-      flex: 1 0 100%;
-    }
-
-    @media (max-width: 575.98px) {
+    @media (max-width: 991.98px) {
       margin-right: 0;
       flex: 1 0 100%;
     }
@@ -179,7 +174,12 @@ footer.app-footer {
       letter-spacing: 0.5px;
       color: $primary;
 
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        margin-bottom: 4rem;
+      }
+
       @media (max-width: 575.98px) {
+        margin-bottom: 3rem;
         font-size: 0.9rem;
       }
     }

@@ -29,6 +29,8 @@ yarn serve
 - [Vite](https://vitejs.dev/)
 - [Sass](https://sass-lang.com/)
 - [Normalize.css](https://necolas.github.io/normalize.css/)
+- [Poppins](https://github.com/google/fonts/tree/master/ofl/poppins)
+- [Buenard](https://github.com/google/fonts/tree/master/ofl/buenard)
 
 ## Credits
 

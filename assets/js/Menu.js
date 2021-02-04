@@ -1,5 +1,8 @@
 export class Menu {
 
+  /**
+   * @constructor Create a menu instance to control the navigation menu behavior
+   */
   constructor() {
     this.app = document.getElementById('app');
     this.openButton = document.getElementById('nav-toggle-open');
@@ -10,25 +13,61 @@ export class Menu {
     this.setup();
   }
 
+  /**
+   * Setup listeners
+   */
   setup() {
     this.openButton.addEventListener('click', this.onClick.bind(this));
     this.closeButton.addEventListener('click', this.onClick.bind(this));
   }
 
+  /**
+   * Attach outside click to the document
+   * @param {Event} event 
+   * @param {Function} callback 
+   */
   addOffClick(event, callback) {
+
+    /**
+     * Determine if click should close the menu 
+     * @param {Event} e 
+     */
     const offClick = e => {
       if (e !== event) {
         callback({ open: false });
         this.mobileMql.removeEventListener('change', offClick);
         document.removeEventListener('click', offClick);
+        document.removeEventListener('keydown', escKey);
       }
     }
-    this.mobileMql.addEventListener('change', offClick);
+
+    /**
+     * Determine the 'Escape' has been pressed
+     * @param {Event} e 
+     */
+    const escKey = e => {
+      if (e.key !== 'Escape') {
+        return;
+      }
+
+      offClick(e);
+    }
+
+    document.addEventListener('keydown', escKey);
     document.addEventListener('click', offClick);
-    // TODO add escape key listener
+    this.mobileMql.addEventListener('change', offClick);
   }
 
+  /**
+   * Determine what to do when the menu is clicked
+   * @param {Event} event 
+   */
   onClick(event) {
+
+    /**
+     * Switch classes and attributes to set the menu state
+     * @param {Object<string, boolean>} param 
+     */
     const toggleMenu = ({ open = false }) => {
       if (open) {
         document.body.classList.add('no-scroll');
@@ -50,7 +89,7 @@ export class Menu {
     }
 
     if (!this.app.classList.contains('menu-is-open')) {
-      toggleMenu({ open: true })
+      toggleMenu({ open: true });
       this.addOffClick(event, toggleMenu);
     }
   }
