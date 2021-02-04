@@ -129,12 +129,9 @@ section.trips {
     }
 
     ul.trips-list {
-      margin: 0;
-      padding: 0;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      list-style: none;
 
       .trip {
         margin: 1rem;
