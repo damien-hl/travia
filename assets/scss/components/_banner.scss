@@ -6,20 +6,19 @@ section.banner {
   background-image: url("../images/david-marcu-78A265wPiO4-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: 50%;
 
   @media (min-width: 992px) {
-    // background-position: left 100px center;
     background-position-x: left 100px;
-    background-position-y: 50%;
   }
 
   @media (min-width: 576px) and (max-width: 991.98px) {
-    background-position: left 75px center;
+    background-position-x: left 75px;
   }
 
   @media (max-width: 575.98px) {
     flex-direction: column-reverse;
-    background-position: left 0% center;
+    background-position-x: left 0%;
   }
 
   .banner-social {

@@ -14,15 +14,12 @@ import './assets/scss/main.scss'
 // JavaScript
 import { Menu } from './assets/js/Menu'
 import { Modal } from './assets/js/Modal'
+// import { Banner } from './assets/js/Banner'
 
 document.addEventListener('DOMContentLoaded', () => {
 
   new Menu();
   new Modal();
-
-  window.addEventListener('scroll', () => {
-    let y = window.pageYOffset / 4;
-    document.querySelector('section.banner').style.backgroundPositionY = 'calc(50% - ' + y + 'px)'
-  })
+  // new Banner();
 
 });
