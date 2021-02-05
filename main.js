@@ -15,11 +15,13 @@ import './assets/scss/main.scss';
 import { Menu } from './assets/js/Menu';
 import { Modal } from './assets/js/Modal';
 import { Form } from './assets/js/Form';
+import { ScrollBack } from './assets/js/ScrollBack';
 
 document.addEventListener('DOMContentLoaded', () => {
 
   new Menu();
   new Modal();
   new Form();
+  new ScrollBack();
 
 });

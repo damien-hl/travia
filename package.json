@@ -13,7 +13,6 @@
   "dependencies": {
     "@fontsource/buenard": "^4.1.0",
     "@fontsource/poppins": "^4.1.0",
-    "gsap": "^3.6.0",
     "normalize.css": "^8.0.1"
   }
 }

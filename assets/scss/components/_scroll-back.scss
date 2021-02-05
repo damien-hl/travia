@@ -1,0 +1,34 @@
+#scroll-back {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1940;
+
+  @include tablet-only {
+    bottom: 1.5rem;
+    bottom: 1.5rem;
+  }
+
+  @include mobile-only {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .scroll-back-btn {
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../icons/up-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center center;
+    box-shadow: 0 0 20ps rgba(0,0,0,0.25);
+
+    &:focus {
+      background-color: darken($primary, 2.5);
+    }
+  
+    &:hover {
+      background-color: darken($primary, 5);
+    }
+  }
+}
