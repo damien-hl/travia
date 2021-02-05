@@ -189,6 +189,15 @@ footer.app-footer {
     .useful-list {
       .useful-item {
         margin-bottom: 1.5rem;
+
+        .useful-link {
+          color: $body-light-color;
+          transition: color 200ms ease;
+
+          &:hover, &:focus {
+            color: $body-color;
+          }
+        }
       }
     }
   }
