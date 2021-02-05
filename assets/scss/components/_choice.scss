@@ -15,6 +15,7 @@ section.choice {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 
     @include mobile-tablet-only {
       width: 100%;
@@ -70,7 +71,7 @@ section.choice {
     display: flex;
     align-items: flex-start;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     @include mobile-tablet-only {
       flex-wrap: wrap;
