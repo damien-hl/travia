@@ -18,7 +18,6 @@ export class Menu {
    */
   setup() {
     this.openButton.addEventListener('click', this.onClick.bind(this));
-    this.closeButton.addEventListener('click', this.onClick.bind(this));
   }
 
   /**
@@ -27,6 +26,14 @@ export class Menu {
    * @param {Function} callback 
    */
   addOffClick(event, callback) {
+
+    /**
+     * Prevent bubbling up to the parents
+     * @param {Event} e 
+     */
+    const stopPropagation = e => {
+      e.stopPropagation();
+    }
 
     /**
      * Determine if click should close the menu 
@@ -38,6 +45,8 @@ export class Menu {
         this.mobileMql.removeEventListener('change', offClick);
         document.removeEventListener('click', offClick);
         document.removeEventListener('keydown', escKey);
+        this.closeButton.removeEventListener('click', offClick);
+        this.navMenu.removeEventListener('click', stopPropagation);
       }
     }
 
@@ -53,6 +62,8 @@ export class Menu {
       offClick(e);
     }
 
+    this.navMenu.addEventListener('click', stopPropagation);
+    this.closeButton.addEventListener('click', offClick);
     document.addEventListener('keydown', escKey);
     document.addEventListener('click', offClick);
     this.mobileMql.addEventListener('change', offClick);
