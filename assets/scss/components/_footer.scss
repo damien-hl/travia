@@ -4,12 +4,12 @@ footer.app-footer {
   max-width: 1320px;
   display: flex;
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
+  @include tablet-only {
     padding: 4rem 1rem;
     flex-wrap: wrap;
   }
 
-  @media (max-width: 575.98px) {
+  @include mobile-only {
     padding: 3rem 1rem;
     flex-wrap: wrap;
   }
@@ -18,7 +18,7 @@ footer.app-footer {
     margin-right: 4rem;
     flex: 0 0 50%;
 
-    @media (max-width: 991.98px) {
+    @include mobile-tablet-only {
       margin-right: 0;
       flex: 1 0 100%;
     }
@@ -31,11 +31,11 @@ footer.app-footer {
       line-height: 3.4rem;
       color: $primary;
 
-      @media (min-width: 576px) and (max-width: 991.98px) {
+      @include tablet-only {
         margin-bottom: 4rem;
       }
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin-bottom: 3rem;
         text-align: center;
       }
@@ -46,7 +46,7 @@ footer.app-footer {
       display: flex;
       height: 5rem;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         height: 4rem;
       }
 
@@ -63,13 +63,13 @@ footer.app-footer {
           box-shadow: 0 0 2px $primary;
         }
 
-        @media (min-width: 576px) and (max-width: 991.98px) {
+        @include tablet-only {
           flex-shrink: 1;
           flex-grow: 0;
           flex-basis: 100%;
         }
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           padding: 1rem 2rem;
           flex-shrink: 1;
           flex-grow: 0;
@@ -97,13 +97,13 @@ footer.app-footer {
           background-color: darken($primary, 5);
         }
 
-        @media (min-width: 576px) and (max-width: 991.98px) {
+        @include tablet-only {
           flex-shrink: 1;
           flex-grow: 0;
           flex-basis: 0;
         }
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           padding: 1rem 2rem;
           flex-shrink: 1;
           flex-grow: 0;
@@ -115,7 +115,7 @@ footer.app-footer {
 
     .social {
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         text-align: center;
       }
 
@@ -143,7 +143,7 @@ footer.app-footer {
           border-color: $primary;
         }
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           margin: 0 0.5rem;
         }
       }
@@ -155,11 +155,11 @@ footer.app-footer {
     margin: 0 auto;
     flex: 0 0 auto;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       flex: 1 0 50%;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       flex: 1 0 100%;
       text-align: center;
     }
@@ -174,11 +174,11 @@ footer.app-footer {
       letter-spacing: 0.5px;
       color: $primary;
 
-      @media (min-width: 576px) and (max-width: 991.98px) {
+      @include tablet-only {
         margin-bottom: 4rem;
       }
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin-bottom: 3rem;
         font-size: 0.9rem;
       }

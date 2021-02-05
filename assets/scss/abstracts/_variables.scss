@@ -9,3 +9,10 @@ $body-light-theme-bg: #ffffff;
 
 $font-family-sans-serif: 'Poppins', sans-serif;
 $font-family-serif: 'Buenard', serif;
+
+$breakpoint: 576px;
+
+$breakpoints: (
+  mobile: 576px,
+  tablet: 992px
+);

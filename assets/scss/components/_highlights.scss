@@ -5,13 +5,13 @@ section.highlights {
   background-color: $body-light-theme-bg;
   color: $body-light-theme-color;
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
+  @include tablet-only {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-  @media (max-width: 575.98px) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  @include mobile-only {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .container {
@@ -21,11 +21,11 @@ section.highlights {
     height: 100%;
     display: flex;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       flex-wrap: wrap;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       flex-wrap: wrap;
     }
   }
@@ -35,20 +35,20 @@ section.highlights {
     flex: 0 0 35%;
     align-self: flex-end;
 
-    @media (min-width: 992px) {
+    @include desktop-only {
       padding-right: 0.5rem;
     }
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       flex: 1 0 100%;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       flex: 1 0 100%;
     }
 
     p.category {
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         text-align: center;
       }
 
@@ -59,7 +59,7 @@ section.highlights {
         font-weight: 600;
         color: $primary;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 0.9rem;
         }
       }
@@ -71,7 +71,7 @@ section.highlights {
       font-weight: 700;
       line-height: 3.4rem;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         font-size: 3rem;
         text-align: center;
       }
@@ -84,11 +84,11 @@ section.highlights {
       line-height: 1.75rem;
       color: #6e6e6e;
 
-      @media (min-width: 576px) and (max-width: 991.98px) {
+      @include tablet-only {
         padding-right: 7rem;
       }
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin: 0 auto 2rem;
         padding-right: 0;
         font-size: 0.9rem;
@@ -101,7 +101,7 @@ section.highlights {
       font-weight: 500;
       text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         font-size: 0.9rem;
         text-align: center;
       }
@@ -110,7 +110,7 @@ section.highlights {
     ul.tags {
       display: flex;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         justify-content: center;
       }
 
@@ -120,7 +120,7 @@ section.highlights {
         margin-bottom: 3.5rem;
         color: #999999;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           margin-right: 1.5rem;
           margin-left: 1.5rem;
           margin-bottom: 1rem;
@@ -154,11 +154,11 @@ section.highlights {
     align-self: stretch;
     display: flex;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       flex: 1 0 100%;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       flex: 1 0 100%;
       flex-direction: column;
     }
@@ -169,7 +169,7 @@ section.highlights {
       display: flex;
       flex-direction: column;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         flex: 1 0 500px;
       }
 
@@ -182,7 +182,7 @@ section.highlights {
         line-height: 1.75rem;
         text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 0.9rem;
         }
       }
@@ -215,7 +215,7 @@ section.highlights {
       height: 100%;
       position: relative;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         flex: 1 0 500px;
       }
 
@@ -233,7 +233,7 @@ section.highlights {
           font-weight: 600;
           text-transform: uppercase;
 
-          @media (max-width: 575.98px) {
+          @include mobile-only {
             font-size: 1rem;
           }
         }
@@ -243,7 +243,7 @@ section.highlights {
           font-weight: 300;
           line-height: 1.25rem;
 
-          @media (max-width: 575.98px) {
+          @include mobile-only {
             font-size: 0.9rem;
           }
         }
@@ -253,7 +253,7 @@ section.highlights {
           font-weight: 500;
           text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
-          @media (max-width: 575.98px) {
+          @include mobile-only {
             font-size: 0.9rem;
           }
         }
@@ -263,7 +263,7 @@ section.highlights {
         height: 700px;
         overflow: hidden;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           height: 100%;
         }
 

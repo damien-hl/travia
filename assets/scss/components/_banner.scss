@@ -8,15 +8,15 @@ section.banner {
   background-repeat: no-repeat;
   background-position-y: 50%;
 
-  @media (min-width: 992px) {
+  @include desktop-only {
     background-position-x: left 100px;
   }
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
+  @include tablet-only {
     background-position-x: left 75px;
   }
 
-  @media (max-width: 575.98px) {
+  @include mobile-only {
     flex-direction: column-reverse;
     background-position-x: left 0%;
   }
@@ -26,11 +26,11 @@ section.banner {
     align-self: flex-end;
     flex: 0 0 100px;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       flex: 0 0 75px;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       margin-bottom: 3.5rem;
       padding: 1rem 0.5rem;
       align-self: center;
@@ -62,7 +62,7 @@ section.banner {
         border-color: $primary;
       }
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin: 0 0.5rem;
       }
     }
@@ -73,11 +73,11 @@ section.banner {
     padding: 0 0 8rem 120px;
     flex: 1 1 auto;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       padding: 0 4rem 8rem;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       margin-top: 0;
       padding: 0 1rem;
       align-self: center;
@@ -94,7 +94,7 @@ section.banner {
       line-height: 1;
       letter-spacing: 1px;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         font-size: 4.5rem;
       }
     }
@@ -105,7 +105,7 @@ section.banner {
       font-size: 1rem;
       line-height: 1.75rem;
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         font-size: 0.9rem;
         line-height: 1.5rem;
       }
@@ -138,7 +138,7 @@ section.banner {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
     white-space: nowrap;
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       padding: 1.5rem 2rem;
       justify-content: center;
       bottom: calc((3.5rem + 3rem) / -2);
@@ -165,7 +165,7 @@ section.banner {
         background-color: darken($primary, 5);
       }
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin-right: 1.5rem;
         flex: 0 0 3.5rem;
         width: 3.5rem;
@@ -184,7 +184,7 @@ section.banner {
         border-bottom: 0.6rem solid transparent;
         border-left: 0.9rem solid #ffffff;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           border-top-width: 0.4rem;
           border-bottom-width: 0.4rem;
           border-left-width: 0.7rem;
@@ -198,7 +198,7 @@ section.banner {
       color: #000000;
       text-shadow: 0 0 2px rgba(0,0,0,0.1);
 
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         font-size: 0.9rem;
         line-height: 1.5rem;
       }

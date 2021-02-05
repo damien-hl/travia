@@ -5,7 +5,7 @@ section.choice {
   background-color: $body-light-theme-bg;
   color: $body-light-theme-color;
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
+  @include tablet-only {
     background-position-y: -340px;
   }
 
@@ -16,7 +16,7 @@ section.choice {
     top: 0;
     left: 0;
 
-    @media (max-width: 991.98px) {
+    @include mobile-tablet-only {
       width: 100%;
       height: 45%;
     }
@@ -42,12 +42,12 @@ section.choice {
     color: $body-color;
     transition: background-color 200ms ease;
 
-    @media (min-width: 576px) and (max-width: 991.98px) {
+    @include tablet-only {
       margin: 1rem;
       position: initial;
     }
 
-    @media (max-width: 575.98px) {
+    @include mobile-only {
       margin: 1rem auto;
       position: initial;
       display: block;
@@ -72,7 +72,7 @@ section.choice {
     position: relative;
     z-index: 1;
 
-    @media (max-width: 991.98px) {
+    @include mobile-tablet-only {
       flex-wrap: wrap;
     }
 
@@ -80,9 +80,11 @@ section.choice {
       margin: 0 10rem 0 auto;
       width: 340px;
       height: 477px;
+      overflow: hidden;
+      border: 10px solid #ffffff;
 
-      @media (max-width: 991.98px) {
-        margin: 0 auto;
+      @include mobile-tablet-only {
+        margin: 0 auto 3rem;
       }
 
       .background-image {
@@ -92,7 +94,12 @@ section.choice {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        border: 10px solid #ffffff;
+        transition: transform 500ms;
+        will-change: transform;
+
+        &:hover, &:focus {
+          transform: scale(1.2);
+        }
       }
     }
 
@@ -100,16 +107,16 @@ section.choice {
       width: 100%;
       flex: 0 0 30%;
 
-      @media (min-width: 992px) {
+      @include desktop-only {
         padding-right: 0.5rem;
       }
 
-      @media (max-width: 991.98px) {
+      @include mobile-tablet-only {
         flex: 1 0 100%;
       }
 
       p.category {
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           text-align: center;
         }
 
@@ -120,7 +127,7 @@ section.choice {
           font-weight: 600;
           color: $primary;
 
-          @media (max-width: 575.98px) {
+          @include mobile-only {
             font-size: 0.9rem;
           }
         }
@@ -132,7 +139,7 @@ section.choice {
         font-weight: 700;
         line-height: 3.4rem;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 3rem;
           text-align: center;
         }
@@ -145,11 +152,11 @@ section.choice {
         line-height: 1.75rem;
         color: #6e6e6e;
 
-        @media (min-width: 576px) and (max-width: 991.98px) {
+        @include tablet-only {
           padding-right: 7rem;
         }
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           margin: 0 auto 2rem;
           padding-right: 0;
           font-size: 0.9rem;
@@ -162,7 +169,7 @@ section.choice {
         font-weight: 500;
         text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 0.9rem;
           text-align: center;
         }

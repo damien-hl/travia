@@ -5,6 +5,16 @@ section.trips {
   background-color: $body-light-theme-bg;
   color: $body-light-theme-color;
 
+  @include tablet-only {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @include mobile-only {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   &::after {
     content: "";
     width: 350px;
@@ -29,7 +39,7 @@ section.trips {
     display: flex;
     align-items: flex-start;
 
-    @media (max-width: 991.98px) {
+    @include mobile-tablet-only {
       flex-wrap: wrap;
     }
 
@@ -37,16 +47,16 @@ section.trips {
       width: 100%;
       flex: 0 0 35%;
 
-      @media (min-width: 992px) {
+      @include desktop-only {
         padding-right: 0.5rem;
       }
 
-      @media (max-width: 991.98px) {
+      @include mobile-tablet-only {
         flex: 1 0 100%;
       }
 
       p.category {
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           text-align: center;
         }
 
@@ -57,7 +67,7 @@ section.trips {
           font-weight: 600;
           color: $primary;
 
-          @media (max-width: 575.98px) {
+          @include mobile-only {
             font-size: 0.9rem;
           }
         }
@@ -69,7 +79,7 @@ section.trips {
         font-weight: 700;
         line-height: 3.4rem;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 3rem;
           text-align: center;
         }
@@ -82,11 +92,11 @@ section.trips {
         line-height: 1.75rem;
         color: #6e6e6e;
 
-        @media (min-width: 576px) and (max-width: 991.98px) {
+        @include tablet-only {
           padding-right: 7rem;
         }
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           margin: 0 auto 2rem;
           padding-right: 0;
           font-size: 0.9rem;
@@ -99,7 +109,7 @@ section.trips {
         font-weight: 500;
         text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 0.9rem;
           text-align: center;
         }
@@ -113,7 +123,7 @@ section.trips {
         color: $body-color;
         transition: background-color 200ms ease;
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           margin: 2rem auto;
           display: block;
         }
@@ -140,12 +150,12 @@ section.trips {
         background-color: #ffffff;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
 
-        @media (min-width: 576px) and (max-width: 991.98px) {
+        @include tablet-only {
           margin: 1rem 0;
           flex: 0 0 calc(50% - 1rem);
         }
 
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           margin: 1rem 0;
           flex: 0 0 100%;
         }
@@ -215,9 +225,10 @@ section.trips {
             color: $body-light-color;
             transition: color 200ms ease, border-color 200ms ease;
 
-            @media (max-width: 575.98px) {
+            @include mobile-only {
               font-size: 0.9rem;
             }
+
             &:hover,
             &:focus {
               border-color: $primary;

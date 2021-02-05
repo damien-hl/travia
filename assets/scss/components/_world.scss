@@ -16,7 +16,7 @@ section.world {
     background-repeat: repeat-x;
     background-position: right center;
 
-    @media (max-width: 991.98px) {
+    @include mobile-tablet-only {
       background-position: center center;
     }
 
@@ -37,7 +37,7 @@ section.world {
         right: calc(100% - 875px);
       }
 
-      @media (max-width: 991.98px) {
+      @include mobile-tablet-only {
         display: none;
       }
     }
@@ -58,7 +58,7 @@ section.world {
         right: calc(100% - 820px);
       } 
 
-      @media (max-width: 991.98px) {
+      @include mobile-tablet-only {
         display: none;
       }
     }
@@ -72,7 +72,7 @@ section.world {
       background-repeat: no-repeat;
       background-position: center center;  
 
-      @media (max-width: 991.98px) {
+      @include mobile-tablet-only {
         display: none;
       }
 
@@ -124,7 +124,7 @@ section.world {
     max-width: 1400px;
     display: flex;
 
-    @media (max-width: 991.98px) {
+    @include mobile-tablet-only {
       flex-direction: column-reverse;
     }
 
@@ -138,13 +138,13 @@ section.world {
       position: relative;
       z-index: 1;
 
-      @media (min-width: 576px) and (max-width: 991.98px) {
+      @include tablet-only {
         margin: 0 auto 2.5rem;
         width: calc(100% - 5rem);
         max-width: 580px;
       }
     
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin: 0 auto 2.5rem;
         width: calc(100% - 3rem);
         min-height: 380px;
@@ -160,7 +160,7 @@ section.world {
         background-repeat: no-repeat;
         background-position: right center;
     
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           background-position: center center;
         }
 
@@ -174,7 +174,7 @@ section.world {
           z-index: -1;
           background-color: $primary;
     
-          @media (max-width: 575.98px) {
+          @include mobile-only {
             top: 1.5rem;
             bottom: -1.5rem;
             right: -1.5rem;
@@ -190,11 +190,11 @@ section.world {
       position: relative;
       z-index: 1;
 
-      @media (min-width: 576px) and (max-width: 991.98px) {
+      @include tablet-only {
         margin: 50px auto;
       }
     
-      @media (max-width: 575.98px) {
+      @include mobile-only {
         margin: 25px auto;
       }
 
@@ -203,7 +203,7 @@ section.world {
         font-size: 3.25rem;
         line-height: 1;
     
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 3rem;
         }
       }
@@ -212,7 +212,7 @@ section.world {
         font-size: 1rem;
         line-height: 1;
     
-        @media (max-width: 575.98px) {
+        @include mobile-only {
           font-size: 0.9rem;
         }
       }
