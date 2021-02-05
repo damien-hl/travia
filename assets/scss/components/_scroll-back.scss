@@ -17,11 +17,8 @@
   .scroll-back-btn {
     width: 3rem;
     height: 3rem;
-    background-image: url("../icons/up-arrow.svg");
-    background-repeat: no-repeat;
-    background-size: 1.5rem;
-    background-position: center center;
-    box-shadow: 0 0 20ps rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    transition: background-color 200ms ease;
 
     &:focus {
       background-color: darken($primary, 2.5);
@@ -29,6 +26,16 @@
   
     &:hover {
       background-color: darken($primary, 5);
+    }
+
+    .arrow {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-image: url("../icons/up-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: center center;
     }
   }
 }

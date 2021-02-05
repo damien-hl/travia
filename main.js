@@ -9,15 +9,22 @@ import '@fontsource/poppins/700.css';
 
 // Styles
 import 'normalize.css';
+import 'aos/dist/aos.css';
 import './assets/scss/main.scss';
 
 // JavaScript
+import AOS from 'aos';
 import { Menu } from './assets/js/Menu';
 import { Modal } from './assets/js/Modal';
 import { Form } from './assets/js/Form';
 import { ScrollBack } from './assets/js/ScrollBack';
+AOS.init();
 
 document.addEventListener('DOMContentLoaded', () => {
+  
+  AOS.init({
+    offset: 200,
+  });
 
   new Menu();
   new Modal();
