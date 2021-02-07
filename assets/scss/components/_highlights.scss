@@ -191,20 +191,33 @@ section.highlights {
         width: 100%;
         height: 100%;
         flex: 1;
-        overflow: hidden;
 
         .background-image {
           width: 100%;
           height: 100%;
-          background-image: url("../images/didin-emelu-8--kuxbxuKU-unsplash.jpg");
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
-          transition: transform 500ms;
-          will-change: transform;
+          overflow: hidden;
+          position: relative;
 
-          &:hover, &:focus {
-            transform: scale(1.2);
+          &:hover,
+          &:focus {
+            &:after {
+              transform: scale(1.2);
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-image: url("../images/didin-emelu-8--kuxbxuKU-unsplash.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: transform 500ms;
+            will-change: transform;
           }
         }
       }
@@ -261,7 +274,6 @@ section.highlights {
       .image-container {
         width: 100%;
         height: 700px;
-        overflow: hidden;
 
         @include mobile-only {
           height: 100%;
@@ -270,15 +282,29 @@ section.highlights {
         .background-image {
           width: 100%;
           height: 700px;
-          background-image: url("../images/etienne-boulanger-C5yfbvMWxC8-unsplash.jpg");
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
-          transition: transform 500ms;
-          will-change: transform;
+          position: relative;
+          overflow: hidden;
 
-          &:hover, &:focus {
-            transform: scale(1.2);
+          &:hover,
+          &:focus {
+            &:after {
+              transform: scale(1.2);
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-image: url("../images/etienne-boulanger-C5yfbvMWxC8-unsplash.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: transform 500ms;
+            will-change: transform;
           }
         }
       }

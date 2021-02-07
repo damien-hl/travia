@@ -82,7 +82,6 @@ section.choice {
       margin: 0 10rem 0 auto;
       width: 340px;
       height: 477px;
-      overflow: hidden;
       border: 10px solid #ffffff;
 
       @include mobile-tablet-only {
@@ -92,15 +91,29 @@ section.choice {
       .background-image {
         width: 100%;
         height: 100%;
-        background-image: url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        transition: transform 500ms;
-        will-change: transform;
+        overflow: hidden;
+        position: relative;
 
-        &:hover, &:focus {
-          transform: scale(1.2);
+        &:hover,
+        &:focus {
+          &:after {
+            transform: scale(1.2);
+          }
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background-image: url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          transition: transform 500ms;
+          will-change: transform;
         }
       }
     }
