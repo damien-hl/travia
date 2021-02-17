@@ -34,7 +34,7 @@ yarn serve
 
 ## Credits
 
-- [Template](./assets/docs/attachment.jpg) from [Uplabs](https://www.uplabs.com/)
+- [Template](./assets/docs/attachment.jpg) from [Ibrahim Emran](https://www.uplabs.com/ibrahimemran987) on [Uplabs](https://www.uplabs.com/)
 
 - [Image 1](./assets/images/david-marcu-78A265wPiO4-unsplash.jpg) from [David Marcu](https://unsplash.com/@davidmarcu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@davidmarcu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - [Image 2](./assets/images/didin-emelu-8--kuxbxuKU-unsplash.jpg) from [Didin Emelu](https://unsplash.com/@didin_emelu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@didin_emelu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
