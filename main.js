@@ -22,15 +22,14 @@ import { Form } from './assets/js/Form';
 
 window.customElements.define('travia-scroll-back', ScrollBackElement);
 
-document.addEventListener('DOMContentLoaded', () => {
+AOS.init({
+  offset: 200,
+});
 
-  AOS.init({
-    offset: 200,
-  });
+document.addEventListener('DOMContentLoaded', () => {
 
   new Menu();
   new Modal();
   new Form();
-  new ScrollBack();
 
 });
