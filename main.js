@@ -17,11 +17,14 @@ import AOS from 'aos';
 import { Menu } from './assets/js/Menu';
 import { Modal } from './assets/js/Modal';
 import { Form } from './assets/js/Form';
-import { ScrollBack } from './assets/js/ScrollBack';
+import ScrollBack from './assets/js/ScrollBack';
+
+window.customElements.define('travia-scroll-back', ScrollBack);
+
 AOS.init();
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   AOS.init({
     offset: 200,
   });

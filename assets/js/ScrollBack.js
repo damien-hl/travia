@@ -1,33 +1,41 @@
-export class ScrollBack {
+class ScrollBack extends HTMLElement {
+  #scroll;
+  #button;
 
   constructor() {
-    this.element = document.getElementById('scroll-back');
-    this.button = this.element.children.item(0);
-    this.triggerY = document.querySelector('section.banner').clientHeight;
+    super();
 
-    this.setup();
+    this.#button = this.querySelector('button[aria-label="Scroll to top"]');
+    this.#onScroll();
   }
 
-  setup() {
-    window.addEventListener('scroll', this.onScroll.bind(this));
-    this.button.addEventListener('click', this.onClick.bind(this));
-    this.onScroll();
+  connectedCallback() {
+    window.addEventListener('scroll', this.#onScroll.bind(this));
+    this.#button.addEventListener('click', this.#onClick.bind(this));
   }
 
-  onScroll() {
-    this.scrollY = window.scrollY;
-    if (this.scrollY > this.triggerY) {
-      this.element.style.display = 'block'
+  disconnectedCallback() {
+    this.#button.removeEventListener('click', this.#onClick.bind(this));
+    window.removeEventListener('scroll', this.#onScroll.bind(this));
+  }
+
+  #onScroll() {
+    this.#scroll = window.scrollY;
+
+    if (this.#scroll > 0) {
+      this.style.display = 'block';
     } else {
-      this.element.style.display = 'none'
+      this.style.display = 'none';
     }
   }
 
-  onClick() {
+  #onClick() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   }
-
 }
+
+
+export default ScrollBack;
