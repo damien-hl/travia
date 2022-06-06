@@ -1,4 +1,4 @@
-class ScrollBack extends HTMLElement {
+class ScrollBackElement extends HTMLElement {
   #scroll;
   #button;
 
@@ -37,5 +37,4 @@ class ScrollBack extends HTMLElement {
   }
 }
 
-
-export default ScrollBack;
+export default ScrollBackElement;

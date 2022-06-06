@@ -14,14 +14,13 @@ import './assets/scss/main.scss';
 
 // JavaScript
 import AOS from 'aos';
+import ScrollBackElement from './assets/js/ScrollBack';
+
 import { Menu } from './assets/js/Menu';
 import { Modal } from './assets/js/Modal';
 import { Form } from './assets/js/Form';
-import ScrollBack from './assets/js/ScrollBack';
 
-window.customElements.define('travia-scroll-back', ScrollBack);
-
-AOS.init();
+window.customElements.define('travia-scroll-back', ScrollBackElement);
 
 document.addEventListener('DOMContentLoaded', () => {
 
