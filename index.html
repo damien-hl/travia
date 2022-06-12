@@ -219,9 +219,9 @@
     <footer class="app-footer">
       <div class="contact">
         <h2 class="title">Subscribe newsletter</h2>
-        <form id="newsletter-form" class="form">
+        <form onsubmit="return false" id="newsletter-form" class="form">
           <label for="email"><span class="sr-only">Your email</span></label>
-          <input type="email" name="email" id="email" placeholder="Your email">
+          <input type="email" name="email" id="email" placeholder="Your email" required>
           <input type="submit" value="Subscribe">
         </form>
         <div class="social">

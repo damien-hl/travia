@@ -18,7 +18,6 @@ import ScrollBackElement from './assets/js/ScrollBack';
 
 import { Menu } from './assets/js/Menu';
 import { Modal } from './assets/js/Modal';
-import { Form } from './assets/js/Form';
 
 window.customElements.define('travia-scroll-back', ScrollBackElement);
 
@@ -27,9 +26,6 @@ AOS.init({
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
   new Menu();
   new Modal();
-  new Form();
-
 });
