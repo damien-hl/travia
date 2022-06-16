@@ -14,12 +14,14 @@ import './assets/scss/main.scss';
 
 // JavaScript
 import AOS from 'aos';
-import ScrollBackElement from './assets/js/ScrollBack';
+import ScrollBackElement from './assets/js/components/ScrollBack';
+import FormElement from './assets/js/components/Form';
 
 import { Menu } from './assets/js/Menu';
 import { Modal } from './assets/js/Modal';
 
 window.customElements.define('travia-scroll-back', ScrollBackElement);
+window.customElements.define('travia-form', FormElement);
 
 AOS.init({
   offset: 200,
