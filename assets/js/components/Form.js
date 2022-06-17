@@ -18,4 +18,5 @@ class FormElement extends HTMLElement {
         e.preventDefault();
     }
 }
+
 export default FormElement;
