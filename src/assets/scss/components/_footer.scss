@@ -1,15 +1,20 @@
+@use "sass:color";
+
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
 footer.app-footer {
   margin: 0 auto;
   padding: 6rem 1rem;
   max-width: 1320px;
   display: flex;
 
-  @include tablet-only {
+  @include mixins.tablet-only {
     padding: 4rem 1rem;
     flex-wrap: wrap;
   }
 
-  @include mobile-only {
+  @include mixins.mobile-only {
     padding: 3rem 1rem;
     flex-wrap: wrap;
   }
@@ -18,24 +23,24 @@ footer.app-footer {
     margin-right: 4rem;
     flex: 0 0 50%;
 
-    @include mobile-tablet-only {
+    @include mixins.mobile-tablet-only {
       margin-right: 0;
       flex: 1 0 100%;
     }
 
     h2.title {
       margin-bottom: 6rem;
-      font-family: $font-family-serif;
+      font-family: variables.$font-family-serif;
       font-size: 2.8rem;
       font-weight: 700;
       line-height: 3.4rem;
-      color: $primary;
+      color: variables.$primary;
 
-      @include tablet-only {
+      @include mixins.tablet-only {
         margin-bottom: 4rem;
       }
 
-      @include mobile-only {
+      @include mixins.mobile-only {
         margin-bottom: 3rem;
         text-align: center;
       }
@@ -46,7 +51,7 @@ footer.app-footer {
       display: flex;
       height: 5rem;
 
-      @include mobile-only {
+      @include mixins.mobile-only {
         height: 4rem;
       }
 
@@ -60,17 +65,17 @@ footer.app-footer {
 
         &:focus {
           outline: none;
-          box-shadow: 0 0 2px $primary;
+          box-shadow: 0 0 2px variables.$primary;
         }
 
-        @include tablet-only {
+        @include mixins.tablet-only {
           max-width: calc(100% - 10rem);
           flex-shrink: 1;
           flex-grow: 0;
           flex-basis: 100%;
         }
 
-        @include mobile-only {
+        @include mixins.mobile-only {
           padding: 1rem 2rem;
           max-width: calc(100% - 8.5rem);
           flex-shrink: 1;
@@ -92,20 +97,20 @@ footer.app-footer {
         transition: background-color 200ms ease;
 
         &:focus {
-          background-color: darken($primary, 2.5);
+          background-color: color.adjust(variables.$primary, $lightness: -2.5%);
         }
 
         &:hover {
-          background-color: darken($primary, 5);
+          background-color: color.adjust(variables.$primary, $lightness: -5%);
         }
 
-        @include tablet-only {
+        @include mixins.tablet-only {
           flex-shrink: 1;
           flex-grow: 0;
           flex-basis: 0;
         }
 
-        @include mobile-only {
+        @include mixins.mobile-only {
           padding: 1rem 2rem;
           flex-shrink: 1;
           flex-grow: 0;
@@ -116,8 +121,7 @@ footer.app-footer {
     }
 
     .social {
-
-      @include mobile-only {
+      @include mixins.mobile-only {
         text-align: center;
       }
 
@@ -133,19 +137,21 @@ footer.app-footer {
         font-size: 0.7rem;
         text-transform: uppercase;
         line-height: 1;
-        transition: background-color 500ms ease, border-color 500ms ease;
+        transition:
+          background-color 500ms ease,
+          border-color 500ms ease;
 
         &:focus {
-          background-color: darken($primary, 2.5);
-          border-color: $primary;
+          background-color: color.adjust(variables.$primary, $lightness: -2.5%);
+          border-color: variables.$primary;
         }
 
         &:hover {
-          background-color: $primary;
-          border-color: $primary;
+          background-color: variables.$primary;
+          border-color: variables.$primary;
         }
 
-        @include mobile-only {
+        @include mixins.mobile-only {
           margin: 0 0.5rem;
         }
       }
@@ -157,11 +163,11 @@ footer.app-footer {
     margin: 0 auto;
     flex: 0 0 auto;
 
-    @include tablet-only {
+    @include mixins.tablet-only {
       flex: 1 0 50%;
     }
 
-    @include mobile-only {
+    @include mixins.mobile-only {
       flex: 1 0 100%;
       text-align: center;
     }
@@ -169,18 +175,18 @@ footer.app-footer {
     .useful-title {
       padding-bottom: 0.5rem;
       margin-bottom: 6rem;
-      border-bottom: 2px solid $primary;
+      border-bottom: 2px solid variables.$primary;
       display: inline-block;
       font-size: 1rem;
       font-weight: 500;
       letter-spacing: 0.5px;
-      color: $primary;
+      color: variables.$primary;
 
-      @include tablet-only {
+      @include mixins.tablet-only {
         margin-bottom: 4rem;
       }
 
-      @include mobile-only {
+      @include mixins.mobile-only {
         margin-bottom: 3rem;
         font-size: 0.9rem;
       }
@@ -191,11 +197,12 @@ footer.app-footer {
         margin-bottom: 1.5rem;
 
         .useful-link {
-          color: $body-light-color;
+          color: variables.$body-light-color;
           transition: color 200ms ease;
 
-          &:hover, &:focus {
-            color: $body-color;
+          &:hover,
+          &:focus {
+            color: variables.$body-color;
           }
         }
       }

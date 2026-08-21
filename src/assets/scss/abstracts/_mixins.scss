@@ -1,0 +1,39 @@
+@use "sass:map";
+
+@use "../abstracts/variables" as variables;
+
+@mixin mobile-only {
+  @media (max-width: #{map.get(variables.$breakpoints, mobile) - 0.02px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: map.get(variables.$breakpoints, mobile)) and (max-width: #{map.get(variables.$breakpoints, tablet) - 0.02px}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: map.get(variables.$breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet-only {
+  @media (max-width: #{map.get(variables.$breakpoints, tablet) - 0.02px}) {
+    @content;
+  }
+}
+
+@mixin tablet-desktop-only {
+  @media (min-width: map.get(variables.$breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-desktop-only {
+  @media (max-width: #{map.get(variables.$breakpoints, mobile) - 0.02px}) and (min-width: map.get(variables.$breakpoints, tablet)) {
+    @content;
+  }
+}
