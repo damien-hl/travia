@@ -1,15 +1,20 @@
+@use "sass:color";
+
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
 #scroll-back {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 1940;
 
-  @include tablet-only {
+  @include mixins.tablet-only {
     bottom: 1.5rem;
     bottom: 1.5rem;
   }
 
-  @include mobile-only {
+  @include mixins.mobile-only {
     bottom: 1rem;
     right: 1rem;
   }
@@ -17,22 +22,22 @@
   .scroll-back-btn {
     width: 3rem;
     height: 3rem;
-    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     transition: background-color 200ms ease;
 
     &:focus {
-      background-color: darken($primary, 2.5);
+      background-color: color.adjust(variables.$primary, $lightness: -2.5%);
     }
-  
+
     &:hover {
-      background-color: darken($primary, 5);
+      background-color: color.adjust(variables.$primary, $lightness: -5%);
     }
 
     .arrow {
       width: 100%;
       height: 100%;
       display: inline-block;
-      background-image: url("../icons/up-arrow.svg");
+      background-image: url("../../icons/up-arrow.svg");
       background-repeat: no-repeat;
       background-size: 1.5rem;
       background-position: center center;

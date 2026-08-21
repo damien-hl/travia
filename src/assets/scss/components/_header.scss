@@ -1,3 +1,8 @@
+@use "sass:color";
+
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
 #app {
   &::before {
     content: "";
@@ -34,11 +39,11 @@ header.app-header {
   justify-content: space-between;
   color: #e4e4f0;
 
-  @include tablet-only {
+  @include mixins.tablet-only {
     padding: 0.75rem 1rem;
   }
 
-  @include mobile-only {
+  @include mixins.mobile-only {
     padding: 0.5rem;
   }
 
@@ -93,7 +98,7 @@ header.app-header {
     opacity: 0.75;
     transition: opacity 200ms ease;
 
-    @include mobile-tablet-only {
+    @include mixins.mobile-tablet-only {
       display: block;
     }
 
@@ -129,16 +134,15 @@ header.app-header {
   }
 
   nav.nav-menu {
-  
-    @include tablet-only {
+    @include mixins.tablet-only {
       padding: 0.75rem 1rem;
     }
-  
-    @include mobile-only {
+
+    @include mixins.mobile-only {
       padding: 0.5rem;
     }
 
-    @include mobile-tablet-only {
+    @include mixins.mobile-tablet-only {
       width: 300px;
       max-width: 100vw;
       position: fixed;
@@ -146,7 +150,7 @@ header.app-header {
       bottom: 0;
       right: 0;
       z-index: 1950;
-      background-color: $primary;
+      background-color: variables.$primary;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
       box-sizing: border-box;
       overflow-y: auto;
@@ -168,7 +172,7 @@ header.app-header {
       display: flex;
       justify-content: flex-end;
 
-      @include desktop-only {
+      @include mixins.desktop-only {
         display: none;
       }
 
@@ -215,34 +219,34 @@ header.app-header {
     a.nav-link {
       transition: background-color 0.5s;
 
-      @include desktop-only {
+      @include mixins.desktop-only {
         margin: 0.5rem 0.25rem;
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
         font-weight: 500;
 
         &:focus {
-          background-color: darken($primary, 2.5);
-          box-shadow: 0 0 20px rgba(0,0,0,0.25);
+          background-color: color.adjust(variables.$primary, $lightness: -2.5%);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
         }
 
         &:hover {
-          background-color: $primary;
+          background-color: variables.$primary;
         }
       }
 
-      @include mobile-tablet-only {
+      @include mixins.mobile-tablet-only {
         margin-top: 1rem;
         margin-bottom: 1rem;
         padding: 1rem;
         display: block;
 
         &:focus {
-          background-color: darken($primary, 2.5);
+          background-color: color.adjust(variables.$primary, $lightness: -2.5%);
         }
 
         &:hover {
-          background-color: darken($primary, 5);
+          background-color: color.adjust(variables.$primary, $lightness: -5%);
         }
       }
     }

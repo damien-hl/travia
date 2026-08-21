@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as variables;
+
 #app {
   &.modal-is-open {
     .modal-video {
@@ -14,7 +16,7 @@
   left: 0;
   height: 100%;
   z-index: 1950;
-  background-color: $body-bg;
+  background-color: variables.$body-bg;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
   opacity: 0;
   transition: opacity 500ms ease;
