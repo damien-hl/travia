@@ -40,7 +40,7 @@ jobs:
       - name: Build
         env:
           VITE_BASE_URL: /${{ github.event.repository.name }}/
-        run: pnpm build
+        run: pnpm build-only
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5

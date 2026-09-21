@@ -18,7 +18,7 @@ pnpm install
 pnpm dev
 ```
 
-## Build for production and launch server
+## Build for production and launch preview server
 
 ```sh
 pnpm build
