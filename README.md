@@ -9,20 +9,20 @@ Travia homepage integration, fictional travel assistant
 ## Install dependencies
 
 ```sh
-yarn install
+pnpm install
 ```
 
 ## Development server with hot reload at localhost:3000
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 ## Build for production and launch server
 
 ```sh
-yarn build
-yarn serve
+pnpm build
+pnpm preview
 ```
 
 ## Libraries used
@@ -35,7 +35,7 @@ yarn serve
 
 ## Credits
 
-- [Template](./src/assets/docs/attachment.jpg) from [Ibrahim Emran](https://www.uplabs.com/ibrahimemran987) on [Uplabs](https://www.uplabs.com/)
+- [Template](./.github/assets/mockup.jpg) from [Ibrahim Emran](https://www.uplabs.com/ibrahimemran987) on [Uplabs](https://www.uplabs.com/)
 
 - [Image 1](./src/assets/images/david-marcu-78A265wPiO4-unsplash.jpg) from [David Marcu](https://unsplash.com/@davidmarcu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@davidmarcu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - [Image 2](./src/assets/images/didin-emelu-8--kuxbxuKU-unsplash.jpg) from [Didin Emelu](https://unsplash.com/@didin_emelu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@didin_emelu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
