@@ -3,28 +3,28 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixins" as mixins;
 
-#app {
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 500ms ease;
-  }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
 
-  &.menu-is-open {
-    &::before {
-      z-index: 1950;
-      opacity: 0.25;
-      background-color: black;
-    }
+body.menu-is-open::before {
+  z-index: 1950;
+  opacity: 0.25;
+  background-color: black;
+}
 
+.menu-is-open {
+  @include mixins.mobile-tablet-only {
     nav.nav-menu {
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0) !important;
     }
   }
 }
@@ -151,10 +151,10 @@ header.app-header {
       right: 0;
       z-index: 1950;
       background-color: variables.$primary;
+      transform: translate3d(300px, 0, 0);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
       box-sizing: border-box;
       overflow-y: auto;
-      transform: translate3d(300px, 0, 0);
       transition: transform 500ms ease;
       will-change: transform;
 

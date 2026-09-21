@@ -1,28 +1,23 @@
 export class Menu {
-  private readonly app: HTMLElement;
-  private readonly openButton: HTMLElement;
-  private readonly closeButton: HTMLElement;
-  private readonly navMenu: HTMLElement;
+  private readonly closeTigger: HTMLButtonElement;
   private readonly mobileMql: MediaQueryList;
 
   /**
    * @constructor Create a menu instance to control the navigation menu behavior
    */
-  constructor() {
-    const app = document.getElementById("app");
-    const openButton = document.getElementById("nav-toggle-open");
-    const closeButton = document.getElementById("nav-toggle-close");
-    const navMenu = document.getElementById("nav-menu");
-    this.mobileMql = matchMedia("(max-width: 991.98px)");
+  constructor(
+    private readonly navMenu: HTMLDivElement,
+    private readonly openTrigger: HTMLButtonElement,
+  ) {
+    const closeTigger = navMenu.querySelector<HTMLButtonElement>("#nav-toggle-close");
 
-    if (!app || !openButton || !closeButton || !navMenu) {
+    if (!closeTigger) {
       throw new Error("Cannot initialize Menu: required DOM elements are missing.");
     }
 
-    this.app = app;
-    this.openButton = openButton;
-    this.closeButton = closeButton;
-    this.navMenu = navMenu;
+    this.mobileMql = matchMedia("(max-width: 991.98px)");
+
+    this.closeTigger = closeTigger;
 
     this.setup();
   }
@@ -30,14 +25,21 @@ export class Menu {
   /**
    * Setup listeners
    */
-  setup() {
-    this.openButton.addEventListener("click", this.onClick.bind(this));
+  private setup() {
+    this.openTrigger.addEventListener("click", this.onClick);
+  }
+
+  /**
+   * Dispose listeners
+   */
+  dispose() {
+    this.openTrigger.removeEventListener("click", this.onClick);
   }
 
   /**
    * Attach outside click to the document
    */
-  addOffClick(event: Event, callback: (state: { open?: boolean }) => void) {
+  private addOffClick = (event: Event, callback: (state: { open?: boolean }) => void) => {
     /**
      * Prevent bubbling up to the parents
      */
@@ -51,10 +53,14 @@ export class Menu {
     const offClick = (e: Event) => {
       if (e !== event) {
         callback({ open: false });
+
         this.mobileMql.removeEventListener("change", offClick);
+
         document.removeEventListener("click", offClick);
         document.removeEventListener("keydown", escKey);
-        this.closeButton.removeEventListener("click", offClick);
+
+        this.closeTigger.removeEventListener("click", offClick);
+
         this.navMenu.removeEventListener("click", stopPropagation);
       }
     };
@@ -71,16 +77,19 @@ export class Menu {
     };
 
     this.navMenu.addEventListener("click", stopPropagation);
-    this.closeButton.addEventListener("click", offClick);
+
+    this.closeTigger.addEventListener("click", offClick);
+
     document.addEventListener("keydown", escKey);
     document.addEventListener("click", offClick);
+
     this.mobileMql.addEventListener("change", offClick);
-  }
+  };
 
   /**
    * Determine what to do when the menu is clicked
    */
-  onClick(event: Event) {
+  private onClick = (event: Event) => {
     /**
      * Switch classes and attributes to set the menu state
      */
@@ -90,21 +99,23 @@ export class Menu {
         this.navMenu.setAttribute("aria-expanded", "true");
 
         setTimeout(() => {
-          this.app.classList.add("menu-is-open");
+          document.body.classList.add("menu-is-open");
         }, 25);
       } else {
-        this.app.classList.remove("menu-is-open");
+        document.body.classList.remove("menu-is-open");
 
         setTimeout(() => {
           this.navMenu.setAttribute("aria-expanded", "false");
+
           document.body.classList.remove("no-scroll");
         }, 500);
       }
     };
 
-    if (!this.app.classList.contains("menu-is-open")) {
+    if (!document.body.classList.contains("menu-is-open")) {
       toggleMenu({ open: true });
+
       this.addOffClick(event, toggleMenu);
     }
-  }
+  };
 }

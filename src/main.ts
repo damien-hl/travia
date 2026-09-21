@@ -1,9 +1,9 @@
 import AOS from "aos";
 
-import ScrollBackElement from "./assets/js/components/ScrollBack";
-import FormElement from "./assets/js/components/Form";
 import { Menu } from "./assets/js/Menu";
 import { Modal } from "./assets/js/Modal";
+import { NewsletterForm } from "./assets/js/NewsletterForm";
+import { ScrollToTop } from "./assets/js/ScrollToTop";
 
 import "@fontsource/buenard/400.css";
 import "@fontsource/buenard/700.css";
@@ -17,14 +17,13 @@ import "normalize.css";
 import "aos/dist/aos.css";
 import "./assets/scss/main.scss";
 
-window.customElements.define("travia-scroll-back", ScrollBackElement);
-window.customElements.define("travia-form", FormElement);
-
 AOS.init({
   offset: 200,
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  new Menu();
-  new Modal();
+  new Menu(document.querySelector("#nav-menu")!, document.querySelector("#nav-toggle-open")!);
+  new Modal(document.querySelector("#modal-video")!, document.querySelector("#modal-video-open")!);
+  new NewsletterForm(document.querySelector("#newsletter-form")!);
+  new ScrollToTop(document.querySelector("#scroll-to-top")!);
 });
