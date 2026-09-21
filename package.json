@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.5",
+    "@types/aos": "^3.0.8",
     "@types/node": "^24.13.6",
     "npm-run-all2": "^9.0.3",
     "oxfmt": "^0.64.0",

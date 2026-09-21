@@ -11,10 +11,7 @@ class FormElement extends HTMLElement {
     this.removeEventListener("submit", this.#onSubmit);
   }
 
-  /**
-   * @param {Event} e
-   */
-  #onSubmit(e) {
+  #onSubmit(e: SubmitEvent) {
     e.preventDefault();
   }
 }

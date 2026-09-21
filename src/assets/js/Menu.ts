@@ -1,13 +1,28 @@
 export class Menu {
+  private readonly app: HTMLElement;
+  private readonly openButton: HTMLElement;
+  private readonly closeButton: HTMLElement;
+  private readonly navMenu: HTMLElement;
+  private readonly mobileMql: MediaQueryList;
+
   /**
    * @constructor Create a menu instance to control the navigation menu behavior
    */
   constructor() {
-    this.app = document.getElementById("app");
-    this.openButton = document.getElementById("nav-toggle-open");
-    this.closeButton = document.getElementById("nav-toggle-close");
-    this.navMenu = document.getElementById("nav-menu");
+    const app = document.getElementById("app");
+    const openButton = document.getElementById("nav-toggle-open");
+    const closeButton = document.getElementById("nav-toggle-close");
+    const navMenu = document.getElementById("nav-menu");
     this.mobileMql = matchMedia("(max-width: 991.98px)");
+
+    if (!app || !openButton || !closeButton || !navMenu) {
+      throw new Error("Cannot initialize Menu: required DOM elements are missing.");
+    }
+
+    this.app = app;
+    this.openButton = openButton;
+    this.closeButton = closeButton;
+    this.navMenu = navMenu;
 
     this.setup();
   }
@@ -21,23 +36,19 @@ export class Menu {
 
   /**
    * Attach outside click to the document
-   * @param {Event} event
-   * @param {Function} callback
    */
-  addOffClick(event, callback) {
+  addOffClick(event: Event, callback: (state: { open?: boolean }) => void) {
     /**
      * Prevent bubbling up to the parents
-     * @param {Event} e
      */
-    const stopPropagation = (e) => {
+    const stopPropagation = (e: Event) => {
       e.stopPropagation();
     };
 
     /**
      * Determine if click should close the menu
-     * @param {Event} e
      */
-    const offClick = (e) => {
+    const offClick = (e: Event) => {
       if (e !== event) {
         callback({ open: false });
         this.mobileMql.removeEventListener("change", offClick);
@@ -50,9 +61,8 @@ export class Menu {
 
     /**
      * Determine the 'Escape' has been pressed
-     * @param {Event} e
      */
-    const escKey = (e) => {
+    const escKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") {
         return;
       }
@@ -69,14 +79,12 @@ export class Menu {
 
   /**
    * Determine what to do when the menu is clicked
-   * @param {Event} event
    */
-  onClick(event) {
+  onClick(event: Event) {
     /**
      * Switch classes and attributes to set the menu state
-     * @param {Object<string, boolean>} param
      */
-    const toggleMenu = ({ open = false }) => {
+    const toggleMenu = ({ open = false }: { open?: boolean }) => {
       if (open) {
         document.body.classList.add("no-scroll");
         this.navMenu.setAttribute("aria-expanded", "true");

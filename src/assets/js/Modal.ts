@@ -1,12 +1,26 @@
 export class Modal {
+  private readonly app: HTMLElement;
+  private readonly openButton: HTMLElement;
+  private readonly modal: HTMLElement;
+  private readonly video: HTMLVideoElement;
+
   /**
    * @constructor Create a modal instance to display a video
    */
   constructor() {
-    this.app = document.getElementById("app");
-    this.openButton = document.getElementById("modal-video-open");
-    this.modal = document.getElementById("modal-video");
-    this.video = this.modal.querySelector("video");
+    const app = document.getElementById("app");
+    const openButton = document.getElementById("modal-video-open");
+    const modal = document.getElementById("modal-video");
+    const video = modal?.querySelector("video");
+
+    if (!app || !openButton || !modal || !video) {
+      throw new Error("Cannot initialize Modal: required DOM elements are missing.");
+    }
+
+    this.app = app;
+    this.openButton = openButton;
+    this.modal = modal;
+    this.video = video;
 
     this.setup();
   }
@@ -20,15 +34,12 @@ export class Modal {
 
   /**
    * Attach outside click to the document
-   * @param {Event} event
-   * @param {Function} callback
    */
-  addOffClick(event, callback) {
+  addOffClick(event: Event, callback: (state: { open?: boolean }) => void) {
     /**
      * Determine if click should close the modal
-     * @param {Event} e
      */
-    const offClick = (e) => {
+    const offClick = (e: Event) => {
       if (e !== event) {
         callback({ open: false });
         document.removeEventListener("click", offClick);
@@ -39,9 +50,8 @@ export class Modal {
 
     /**
      * Determine the 'Escape' has been pressed
-     * @param {Event} e
      */
-    const escKey = (e) => {
+    const escKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") {
         return;
       }
@@ -55,14 +65,12 @@ export class Modal {
 
   /**
    * Determine what to do when the modal button is clicked
-   * @param {Event} event
    */
-  onClick(event) {
+  onClick(event: Event) {
     /**
      * Switch classes and attributes to set the modal state
-     * @param {Object<string, boolean>} param
      */
-    const toggleModal = ({ open = false }) => {
+    const toggleModal = ({ open = false }: { open?: boolean }) => {
       if (open) {
         document.body.classList.add("no-scroll");
         this.modal.classList.add("is-visible");

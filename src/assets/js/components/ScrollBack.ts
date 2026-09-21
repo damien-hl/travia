@@ -1,11 +1,15 @@
 class ScrollBackElement extends HTMLElement {
-  #scroll;
-  #button;
+  #scroll = 0;
+  #button: HTMLButtonElement;
 
   constructor() {
     super();
 
-    this.#button = this.querySelector('button[aria-label="Scroll to top"]');
+    const button = this.querySelector<HTMLButtonElement>('button[aria-label="Scroll to top"]');
+    if (!button) {
+      throw new Error("Cannot initialize ScrollBackElement: scroll button is missing.");
+    }
+    this.#button = button;
     this.#onScroll();
   }
 

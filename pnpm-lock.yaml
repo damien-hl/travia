@@ -185,6 +185,9 @@ importers:
       '@tsconfig/node24':
         specifier: ^24.0.5
         version: 24.0.5
+      '@types/aos':
+        specifier: ^3.0.8
+        version: 3.0.8
       '@types/node':
         specifier: ^24.13.6
         version: 24.13.6
@@ -520,6 +523,9 @@ packages:
 
   '@tsconfig/node24@24.0.5':
     resolution: {integrity: sha512-DWC54fGPuhZgg3Ighg4Y/A/bA3ZdB5hnzAuv/MkQ/X85sVsBsMQxu8t7khutdYeiNksBbFdDyeqv1HSW2Zl8aA==}
+
+  '@types/aos@3.0.8':
+    resolution: {integrity: sha512-Wydvt0OnVYO5YZxroBOYITIkAKtKmni9GUQRKuWMK3doplBSaHU11HIIweGwqF/ycmbHQGoLUQzuXFRVY+Ougg==}
 
   '@types/node@24.13.6':
     resolution: {integrity: sha512-SGrw/h3KPFshy3OE6ZL53LMBG5vGQQ8/gIpiqz/kRZhPJ7HgwCEs8LBuNtWLa8dvGZVpSF7+Bf+c11HUrCb/yg==}
@@ -1148,6 +1154,8 @@ snapshots:
   '@rolldown/pluginutils@1.0.1': {}
 
   '@tsconfig/node24@24.0.5': {}
+
+  '@types/aos@3.0.8': {}
 
   '@types/node@24.13.6':
     dependencies:
