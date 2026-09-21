@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as variables;
+@use '../abstracts/variables' as variables;
 
 body {
   font-family: variables.$font-family-sans-serif;
@@ -34,8 +34,8 @@ ul {
 }
 
 button,
-input[type="button"],
-input[type="submit"] {
+input[type='button'],
+input[type='submit'] {
   background-color: variables.$primary;
   border: none;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);

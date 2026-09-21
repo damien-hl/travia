@@ -191,12 +191,27 @@ importers:
       '@types/node':
         specifier: ^24.13.6
         version: 24.13.6
+      nano-staged:
+        specifier: ^1.0.2
+        version: 1.0.2
+      node:
+        specifier: runtime:^24.21.0
+        version: runtime:24.21.0
       npm-run-all2:
         specifier: ^9.0.3
         version: 9.0.3
       oxfmt:
         specifier: ^0.64.0
         version: 0.64.0
+      oxlint:
+        specifier: ^1.83.0
+        version: 1.83.0(oxlint-tsgolint@7.0.2002)
+      oxlint-tsgolint:
+        specifier: ^7.0.2002
+        version: 7.0.2002
+      simple-git-hooks:
+        specifier: ^2.14.0
+        version: 2.14.0
       typescript:
         specifier: ~6.0.3
         version: 6.0.3
@@ -336,6 +351,158 @@ packages:
 
   '@oxfmt/binding-win32-x64-msvc@0.64.0':
     resolution: {integrity: sha512-BtmbtL/QjMtF1a6C3CqoDluH2IfB6fJt62E+B9RFfUPtFk4Iz9PFS6+y/SzzOvSxc7aUk2Kphwg7Dh8lMbwu6g==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [win32]
+
+  '@oxlint-tsgolint/darwin-arm64@7.0.2002':
+    resolution: {integrity: sha512-E3yYb/tI+5M3SqGgKwrwUD0nmjA2FMGD1xFbma46qi8Y7+nPTlGY6bZk/hqxijc9Vda/tdtUxQ2d5zGIEX9qlg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oxlint-tsgolint/darwin-x64@7.0.2002':
+    resolution: {integrity: sha512-qEaMySdvzs8faaJwMO4dFtPFCa+degFCz+HbkFQ0REcIJqJ16KmC0smt30FAI9TeEHCoAtz6sU/6acJvi4uaxg==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oxlint-tsgolint/linux-arm64@7.0.2002':
+    resolution: {integrity: sha512-bqPObCNIR6tDQSc0Xn9Nu7EfWRXFB+qFzADRl/q6YA8zT9YUg3pGUbmicV2hV91uLpiot74so9ocGjx35SaX6w==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oxlint-tsgolint/linux-x64@7.0.2002':
+    resolution: {integrity: sha512-E5CcRALAYdiQMbdYjEqlLOiYuEdt21RtXiyxIoD8bfypdfkpWppacijKOR4i0DtLXFRVwCGQggZBWk5bOIpU1A==}
+    cpu: [x64]
+    os: [linux]
+
+  '@oxlint-tsgolint/win32-arm64@7.0.2002':
+    resolution: {integrity: sha512-L+ul0ZFDiz/ZmTwCQ1J/qS7S6s45ktiaFqb+ZIzx+1sSdtdRxm8/H0+p4VDQYrCKBFzKNb6VjUlm48bNEe3BUg==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@oxlint-tsgolint/win32-x64@7.0.2002':
+    resolution: {integrity: sha512-zkZeJfo4UmYiCzj77u85eCDpdxOiQiSAsV6j9Pvj5e7Vu5+MvwLtK1xmVutE77tJmUJ3eBOSXHR6WgY4AwHHGQ==}
+    cpu: [x64]
+    os: [win32]
+
+  '@oxlint/binding-android-arm-eabi@1.83.0':
+    resolution: {integrity: sha512-0yGY24EwsLk5YDe6F+VkmZyRHSwJDALa3nIrPpq7FXmp2lV2d0TzvBCGeZk+wgiULRGr5blhyr4QMp5KCXJUqA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm]
+    os: [android]
+
+  '@oxlint/binding-android-arm64@1.83.0':
+    resolution: {integrity: sha512-hHfJ0vc17A4iUjH5p9BsTUPYbYRNxGpvD2lbu1aBRk54bzNIx9o5TtYF39QPZcV95DagZd+4DEAw2RH3G2ZsMg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [android]
+
+  '@oxlint/binding-darwin-arm64@1.83.0':
+    resolution: {integrity: sha512-hsOjYjszLb/3zym/TkzUMPAoQlTJcuzSyEPOAyA+skXJIX9M0o+4JfOtqopX/Vf4hSLrJ98j0nvFo23gzk8auQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oxlint/binding-darwin-x64@1.83.0':
+    resolution: {integrity: sha512-mjh5oH2EA+wl5yRJYT9K9G61O2zFlpuv+yf2JwZOi0+dq2FnTUtm1h8i+5Ik0fXPWIu/k84I1psZR9aQsLAnyA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oxlint/binding-freebsd-x64@1.83.0':
+    resolution: {integrity: sha512-fNHr64/YaO8YssuoDVC8+F4Uk5enR86q5uxfHkQrjAPs1dbAILOrD2uaud+J7MO8Fx774g44ERLD0IGIvZE48w==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@oxlint/binding-linux-arm-gnueabihf@1.83.0':
+    resolution: {integrity: sha512-Qpwy3zzAwMj+8/lyYItHmkSMwbkprFNWTK7jPYDOxSyxEhaSLOWYUTCMkjF334J8/WD0nznCCsoBbIH6hpsuIw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm]
+    os: [linux]
+
+  '@oxlint/binding-linux-arm-musleabihf@1.83.0':
+    resolution: {integrity: sha512-s+BirYLFq7JL2k9sP0XI3ZXJ9dYvJ8sX3jLCLoag7tt+zrSHpZxP0jqznfL+Gdgwu7ay0dYgGYJXrQvq3iWloA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm]
+    os: [linux]
+
+  '@oxlint/binding-linux-arm64-gnu@1.83.0':
+    resolution: {integrity: sha512-7lihXt3vKr+GIyapNbHrnFHm/biiW30le6Zv/DExbAFPF6YwCQXVFlONPFehxs0CpGO4CBfYPM9rdDT+XMoIlg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@oxlint/binding-linux-arm64-musl@1.83.0':
+    resolution: {integrity: sha512-q63JalLYVkZiZvls1z3PPUnpmQluOMXp0khqQMznCeAPLGydfNY8JhvuA4WlK57JfrvikU8wB5lPVveqpIXvew==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@oxlint/binding-linux-ppc64-gnu@1.83.0':
+    resolution: {integrity: sha512-krQmDF+dRbxvdqVPV88ZuOoPPu8X5BuqDA8Hd+qcS4YMRQCb+nexA57DazgGsc/rGdKBe3QmV0mnv0bdpW/p5g==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@oxlint/binding-linux-riscv64-gnu@1.83.0':
+    resolution: {integrity: sha512-MmOl8Y6txEAXZU1RG8Rr264jQ6D7VPmqFsU/45x/FeWsGe32hklTqGrLE6UxHzp5Rjt0wP+20tY8YXKgSFB3mw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@oxlint/binding-linux-riscv64-musl@1.83.0':
+    resolution: {integrity: sha512-u1rMymh0W3JZkq370kzQsYPULGWqhE09pZRqnZvUSoYaI9pVO5yVX+iYIslmWuEgwuzH9YAaOsScJiobWCHoOw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [musl]
+
+  '@oxlint/binding-linux-s390x-gnu@1.83.0':
+    resolution: {integrity: sha512-y0zK3HNwGysu7rqtE+BQG/d0bx5gh/KwlOtghN8oWeK1KcWzeaLqtZrbm8owqdma1lFyrce/hTO5ismuNu+INQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@oxlint/binding-linux-x64-gnu@1.83.0':
+    resolution: {integrity: sha512-rS5gM0NgD7ngmuJmbIehsidtrOwKkLFwCQbKEeb9KuyQrrWNq5Zkn0uV6AYdXOMJ0grrWEiLwBuvMxt8w5vsNw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@oxlint/binding-linux-x64-musl@1.83.0':
+    resolution: {integrity: sha512-W2IH4EtpcPaWcvNGCA95YoDg4vxqE/ZiPCi3arrxEEpsK7+JQN9WYwrlYFx9pcdP6KPXqRqkv3zdQPHcx7b6YQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@oxlint/binding-openharmony-arm64@1.83.0':
+    resolution: {integrity: sha512-6LyKkUyoajssTPLlZmDbZIbu4IZ5B4bGuRUnBgCGpEvHP3FQMaYITncHA/unPUo7q+Z+pIu2HhdkQ+8d1SG7iA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [openharmony]
+
+  '@oxlint/binding-win32-arm64-msvc@1.83.0':
+    resolution: {integrity: sha512-Uz/fObEtF0jmNJQJ8CGRBKfefYstS0/wjD3s6IGzP8nUwsJykHQJBiN3npHwKiGRGn/vvBEgNr4B3cCzmmatvg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [arm64]
+    os: [win32]
+
+  '@oxlint/binding-win32-ia32-msvc@1.83.0':
+    resolution: {integrity: sha512-u7XcvPW6Bk58tY5iWs2ESb0vJjoE/kuSpHxopbwp/p3ZtWVQXZ6wor5w3ssVTHOqd/v8b+QdhSFWQ4grEUNWpA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [ia32]
+    os: [win32]
+
+  '@oxlint/binding-win32-x64-msvc@1.83.0':
+    resolution: {integrity: sha512-LZRubd7ph13QmAg4fFecTYVZkiYbROR2Htaxh/ufWRkDhPOm2wrwaEYR89e0YpPFD3dqBrPoxS7myBw5hmYA7Q==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -679,6 +846,11 @@ packages:
     resolution: {integrity: sha512-S3UwM3yj5mtUSEfP41UZmt/0SCoVYUcU1rkXv+BQ5Ig8ndL4sPoJNBUJERafdPb5jjHJGuMgytgKvKIf58XNBw==}
     engines: {node: '>= 0.10.0'}
 
+  nano-staged@1.0.2:
+    resolution: {integrity: sha512-Fytar3zHLY99nlMfqPPbraxZodqQAHPpdPRyYaplL+lB9DCR6pUrafxbG+Btz4+7fO5Rm/+DO4ZeDO/nLSUMhw==}
+    engines: {node: ^22 || >= 24}
+    hasBin: true
+
   nanoid@3.3.18:
     resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -686,6 +858,138 @@ packages:
 
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
+
+  node@runtime:24.21.0:
+    resolution:
+      type: variations
+      variants:
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-rseyRkr7mfB4wZywbSAdVDvTsxHLoHEoK84bF8l+WLs=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-aix-ppc64.tar.gz
+          targets:
+            - cpu: ppc64
+              os: aix
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-vtfupTJeEQjzLOUijd1qXw8IpJnuQqp0Qq6lg3AvYFc=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-darwin-arm64.tar.gz
+          targets:
+            - cpu: arm64
+              os: darwin
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-FGLLOzBGuBXPjqQ209pFDsGp8R2sflpGsK2lMF1+gJc=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-darwin-x64.tar.gz
+          targets:
+            - cpu: x64
+              os: darwin
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-ckKCw7Q67JmKqVJzgEZbRdIp4CG1gDX19PYwleq/5dU=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-arm64.tar.gz
+          targets:
+            - cpu: arm64
+              os: linux
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-UcXVMGbukpILYXg7A7Buy5nzZhFg97Fcp36EdBFaZ7w=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-ppc64le.tar.gz
+          targets:
+            - cpu: ppc64le
+              os: linux
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-Xy+jdCLgx13jXBaG/lHXgyTywqj+LMI5pB2cAAop2Tg=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-s390x.tar.gz
+          targets:
+            - cpu: s390x
+              os: linux
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-PWNAX8ZaDS0pdsHwvC/Se7C9ByEkaecFqsPwOuWrTJw=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64-musl.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+              libc: musl
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-bh24fvWLiBnl1UAu/xU2SRsY7djre+5e94l4duiNxf8=
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+        - resolution:
+            archive: zip
+            bin:
+              node: node.exe
+            integrity: sha256-h3mxveHTn41CDjtXqmV7OYka9DTT3kSpGQRM7AZ4WSE=
+            prefix: node-v24.21.0-win-arm64
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-win-arm64.zip
+          targets:
+            - cpu: arm64
+              os: win32
+        - resolution:
+            archive: zip
+            bin:
+              node: node.exe
+            integrity: sha256-FY92hbRN5R9sDfHRU1JsvNPhvHOajfxgdyHO913p5UE=
+            prefix: node-v24.21.0-win-x64
+            type: binary
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-win-x64.zip
+          targets:
+            - cpu: x64
+              os: win32
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-MEiwgR4VjKDYZytZyDmGF2PhREkpgNjSmzad/uRXR+Q=
+            type: binary
+            url: https://unofficial-builds.nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-arm64-musl.tar.gz
+          targets:
+            - cpu: arm64
+              os: linux
+              libc: musl
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-AacT402pjntNKjGR7nyj+T3QOE0aLvI8N5shYe5uEzo=
+            type: binary
+            url: https://unofficial-builds.nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64-musl.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+              libc: musl
+    version: 24.21.0
+    hasBin: true
 
   normalize.css@8.0.1:
     resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
@@ -708,6 +1012,23 @@ packages:
       vite-plus: '*'
     peerDependenciesMeta:
       svelte:
+        optional: true
+      vite-plus:
+        optional: true
+
+  oxlint-tsgolint@7.0.2002:
+    resolution: {integrity: sha512-rQAj2RAQM57nCwTd3PhtnAkREGW2StqI47tzudNlJF8WwGommM7rVpeP4O1O8/ZiuDZ9f2GnTESzLHGTluwkvQ==}
+    hasBin: true
+
+  oxlint@1.83.0:
+    resolution: {integrity: sha512-cyDzSzaw3uzP0TeCeq3lLRPPoaUxkbB4ZOXj+kn+5r+BX9V+4bNVGk9lxer+WrgcpebH4JxLlJ3KQjveVztOLQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    hasBin: true
+    peerDependencies:
+      oxlint-tsgolint: '>=7.0.2001'
+      vite-plus: '*'
+    peerDependenciesMeta:
+      oxlint-tsgolint:
         optional: true
       vite-plus:
         optional: true
@@ -891,6 +1212,10 @@ packages:
     resolution: {integrity: sha512-w1aiOKwKuRgtwAReIIj89puqg+I7GvX4IbLrvmhXbzQsj1+Zwi4VO3+fa6ZF91TWSjIxoEkKnMeHcLEODK5ZXA==}
     engines: {node: '>= 0.4'}
 
+  simple-git-hooks@2.14.0:
+    resolution: {integrity: sha512-kkTORPAuxQz2g1QUuN0J8yGWT28tjGBfPOdJ4xT7Vbeu30veKUZQIoID2qGgCDAakaQn59UeZJJ4cFGB8PVP2A==}
+    hasBin: true
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -1047,6 +1372,81 @@ snapshots:
     optional: true
 
   '@oxfmt/binding-win32-x64-msvc@0.64.0':
+    optional: true
+
+  '@oxlint-tsgolint/darwin-arm64@7.0.2002':
+    optional: true
+
+  '@oxlint-tsgolint/darwin-x64@7.0.2002':
+    optional: true
+
+  '@oxlint-tsgolint/linux-arm64@7.0.2002':
+    optional: true
+
+  '@oxlint-tsgolint/linux-x64@7.0.2002':
+    optional: true
+
+  '@oxlint-tsgolint/win32-arm64@7.0.2002':
+    optional: true
+
+  '@oxlint-tsgolint/win32-x64@7.0.2002':
+    optional: true
+
+  '@oxlint/binding-android-arm-eabi@1.83.0':
+    optional: true
+
+  '@oxlint/binding-android-arm64@1.83.0':
+    optional: true
+
+  '@oxlint/binding-darwin-arm64@1.83.0':
+    optional: true
+
+  '@oxlint/binding-darwin-x64@1.83.0':
+    optional: true
+
+  '@oxlint/binding-freebsd-x64@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-arm-gnueabihf@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-arm-musleabihf@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-arm64-gnu@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-arm64-musl@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-ppc64-gnu@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-riscv64-gnu@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-riscv64-musl@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-s390x-gnu@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-x64-gnu@1.83.0':
+    optional: true
+
+  '@oxlint/binding-linux-x64-musl@1.83.0':
+    optional: true
+
+  '@oxlint/binding-openharmony-arm64@1.83.0':
+    optional: true
+
+  '@oxlint/binding-win32-arm64-msvc@1.83.0':
+    optional: true
+
+  '@oxlint/binding-win32-ia32-msvc@1.83.0':
+    optional: true
+
+  '@oxlint/binding-win32-x64-msvc@1.83.0':
     optional: true
 
   '@parcel/watcher-android-arm64@2.6.0':
@@ -1266,10 +1666,14 @@ snapshots:
 
   memorystream@0.3.1: {}
 
+  nano-staged@1.0.2: {}
+
   nanoid@3.3.18: {}
 
   node-addon-api@7.1.1:
     optional: true
+
+  node@runtime:24.21.0: {}
 
   normalize.css@8.0.1: {}
 
@@ -1309,6 +1713,38 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.64.0
       '@oxfmt/binding-win32-ia32-msvc': 0.64.0
       '@oxfmt/binding-win32-x64-msvc': 0.64.0
+
+  oxlint-tsgolint@7.0.2002:
+    optionalDependencies:
+      '@oxlint-tsgolint/darwin-arm64': 7.0.2002
+      '@oxlint-tsgolint/darwin-x64': 7.0.2002
+      '@oxlint-tsgolint/linux-arm64': 7.0.2002
+      '@oxlint-tsgolint/linux-x64': 7.0.2002
+      '@oxlint-tsgolint/win32-arm64': 7.0.2002
+      '@oxlint-tsgolint/win32-x64': 7.0.2002
+
+  oxlint@1.83.0(oxlint-tsgolint@7.0.2002):
+    optionalDependencies:
+      '@oxlint/binding-android-arm-eabi': 1.83.0
+      '@oxlint/binding-android-arm64': 1.83.0
+      '@oxlint/binding-darwin-arm64': 1.83.0
+      '@oxlint/binding-darwin-x64': 1.83.0
+      '@oxlint/binding-freebsd-x64': 1.83.0
+      '@oxlint/binding-linux-arm-gnueabihf': 1.83.0
+      '@oxlint/binding-linux-arm-musleabihf': 1.83.0
+      '@oxlint/binding-linux-arm64-gnu': 1.83.0
+      '@oxlint/binding-linux-arm64-musl': 1.83.0
+      '@oxlint/binding-linux-ppc64-gnu': 1.83.0
+      '@oxlint/binding-linux-riscv64-gnu': 1.83.0
+      '@oxlint/binding-linux-riscv64-musl': 1.83.0
+      '@oxlint/binding-linux-s390x-gnu': 1.83.0
+      '@oxlint/binding-linux-x64-gnu': 1.83.0
+      '@oxlint/binding-linux-x64-musl': 1.83.0
+      '@oxlint/binding-openharmony-arm64': 1.83.0
+      '@oxlint/binding-win32-arm64-msvc': 1.83.0
+      '@oxlint/binding-win32-ia32-msvc': 1.83.0
+      '@oxlint/binding-win32-x64-msvc': 1.83.0
+      oxlint-tsgolint: 7.0.2002
 
   path-key@3.1.1: {}
 
@@ -1471,6 +1907,8 @@ snapshots:
   shebang-regex@3.0.0: {}
 
   shell-quote@1.10.0: {}
+
+  simple-git-hooks@2.14.0: {}
 
   source-map-js@1.2.1: {}
 

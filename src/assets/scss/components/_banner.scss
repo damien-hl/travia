@@ -1,14 +1,14 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../abstracts/variables" as variables;
-@use "../abstracts/mixins" as mixins;
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
 
 section.banner {
   min-height: 690px;
   height: 70vh;
   position: relative;
   display: flex;
-  background-image: url("../../images/david-marcu-78A265wPiO4-unsplash.jpg");
+  background-image: url('../../images/david-marcu-78A265wPiO4-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 50%;

@@ -1,37 +1,37 @@
 export class ScrollToTop {
   constructor(private readonly triggerElement: HTMLButtonElement) {
-    this.#setup();
+    this.#setup()
   }
 
   /**
    * Setup listeners
    */
   #setup() {
-    window.addEventListener("scroll", this.#onScroll.bind(this));
-    this.triggerElement.addEventListener("click", this.#onClick.bind(this));
+    window.addEventListener('scroll', this.#onScroll.bind(this))
+    this.triggerElement.addEventListener('click', this.#onClick.bind(this))
 
-    this.#onScroll();
+    this.#onScroll()
   }
 
   dispose() {
-    this.triggerElement.removeEventListener("click", this.#onClick.bind(this));
-    window.removeEventListener("scroll", this.#onScroll.bind(this));
+    this.triggerElement.removeEventListener('click', this.#onClick)
+    window.removeEventListener('scroll', this.#onScroll)
   }
 
-  #onScroll() {
-    const scroll = window.scrollY;
+  #onScroll = () => {
+    const scroll = window.scrollY
 
     if (scroll > 0) {
-      this.triggerElement.style.display = "block";
+      this.triggerElement.style.display = 'block'
     } else {
-      this.triggerElement.style.display = "none";
+      this.triggerElement.style.display = 'none'
     }
   }
 
-  #onClick() {
+  #onClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
-    });
+      behavior: 'smooth',
+    })
   }
 }

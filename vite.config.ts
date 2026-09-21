@@ -1,15 +1,15 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: process.env.VITE_BASE_URL ?? "/",
+  base: process.env.VITE_BASE_URL ?? '/',
   css: {
     preprocessorOptions: {
       sass: {
-        silenceDeprecations: ["color-functions"],
+        silenceDeprecations: ['color-functions'],
       },
       scss: {
-        silenceDeprecations: ["color-functions"],
+        silenceDeprecations: ['color-functions'],
       },
     },
   },
-});
+})

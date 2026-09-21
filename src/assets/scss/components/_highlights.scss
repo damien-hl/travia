@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as variables;
-@use "../abstracts/mixins" as mixins;
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
 
 section.highlights {
   padding-top: 13rem;
@@ -141,11 +141,11 @@ section.highlights {
         }
 
         .creativity {
-          background-image: url("../../icons/pencil-holder.svg");
+          background-image: url('../../icons/pencil-holder.svg');
         }
 
         .ideas {
-          background-image: url("../../icons/idea.svg");
+          background-image: url('../../icons/idea.svg');
         }
       }
     }
@@ -209,13 +209,13 @@ section.highlights {
           }
 
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
-            background-image: url("../../images/didin-emelu-8--kuxbxuKU-unsplash.jpg");
+            background-image: url('../../images/didin-emelu-8--kuxbxuKU-unsplash.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -296,13 +296,13 @@ section.highlights {
           }
 
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
-            background-image: url("../../images/etienne-boulanger-C5yfbvMWxC8-unsplash.jpg");
+            background-image: url('../../images/etienne-boulanger-C5yfbvMWxC8-unsplash.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;

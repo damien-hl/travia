@@ -1,15 +1,15 @@
-@use "abstracts/variables";
-@use "abstracts/mixins";
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
 
-@use "base/base";
+@use 'base/base';
 
-@use "components/modals";
-@use "components/scroll-to-top";
+@use 'components/modals';
+@use 'components/scroll-to-top';
 
-@use "components/header";
-@use "components/banner";
-@use "components/highlights";
-@use "components/world";
-@use "components/trips";
-@use "components/choice";
-@use "components/footer";
+@use 'components/header';
+@use 'components/banner';
+@use 'components/highlights';
+@use 'components/world';
+@use 'components/trips';
+@use 'components/choice';
+@use 'components/footer';

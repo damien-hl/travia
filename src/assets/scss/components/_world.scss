@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as variables;
-@use "../abstracts/mixins" as mixins;
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
 
 section.world {
   min-height: 650px;
@@ -14,7 +14,7 @@ section.world {
     left: 0;
     z-index: 0;
     background-color: variables.$body-bg;
-    background-image: url("../../images/world_map.png");
+    background-image: url('../../images/world_map.png');
     background-size: 1400px;
     background-repeat: repeat-x;
     background-position: right center;
@@ -29,7 +29,7 @@ section.world {
       position: absolute;
       top: 104px;
       right: calc(100% - 1075px);
-      background-image: url("../../images/plane.svg");
+      background-image: url('../../images/plane.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -51,7 +51,7 @@ section.world {
       position: absolute;
       top: 80px;
       right: calc(100% - 1025px);
-      background-image: url("../../images/trail.svg");
+      background-image: url('../../images/trail.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -70,7 +70,7 @@ section.world {
       width: 24px;
       height: 32px;
       position: absolute;
-      background-image: url("../../images/pin.svg");
+      background-image: url('../../images/pin.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -155,7 +155,7 @@ section.world {
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 2.5rem;
         bottom: -2.5rem;
@@ -181,7 +181,7 @@ section.world {
         .background-image {
           width: 100%;
           height: 100%;
-          background-image: url("../../images/kevin-wolf-IfTKequW2Mk-unsplash.jpg");
+          background-image: url('../../images/kevin-wolf-IfTKequW2Mk-unsplash.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: right center;

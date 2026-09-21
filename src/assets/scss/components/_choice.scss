@@ -1,7 +1,7 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../abstracts/variables" as variables;
-@use "../abstracts/mixins" as mixins;
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
 
 section.choice {
   padding-top: 6rem;
@@ -30,7 +30,7 @@ section.choice {
     .background-image {
       width: 100%;
       height: 100%;
-      background-image: url("../../images/erol-ahmed-d3pTF3r_hwY-unsplash.jpg");
+      background-image: url('../../images/erol-ahmed-d3pTF3r_hwY-unsplash.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -107,13 +107,13 @@ section.choice {
         }
 
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           bottom: 0;
           right: 0;
           left: 0;
-          background-image: url("../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+          background-image: url('../../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg');
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;

@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "import", "oxc"],
+
+  "options": {
+    "typeCheck": false,
+    "typeAware": true,
+    "maxWarnings": 0
+  },
+
+  "rules": {
+    "no-debugger": "error",
+    "no-console": "warn",
+
+    "typescript/no-explicit-any": "warn",
+    "typescript/no-floating-promises": "error"
+  }
+}

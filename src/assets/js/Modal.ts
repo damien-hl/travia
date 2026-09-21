@@ -1,33 +1,33 @@
 export class Modal {
-  private readonly video: HTMLVideoElement;
+  private readonly video: HTMLVideoElement
 
   constructor(
     private readonly modal: HTMLDivElement,
     private readonly trigger: HTMLElement,
   ) {
-    const video = modal.querySelector("video");
+    const video = modal.querySelector('video')
 
     if (!video) {
-      throw new Error("Cannot initialize Modal: required DOM elements are missing.");
+      throw new Error('Cannot initialize Modal: required DOM elements are missing.')
     }
 
-    this.video = video;
+    this.video = video
 
-    this.setup();
+    this.setup()
   }
 
   /**
    * Setup listeners
    */
   private setup() {
-    this.trigger.addEventListener("click", this.onClick);
+    this.trigger.addEventListener('click', this.onClick)
   }
 
   /**
    * Dispose listeners
    */
   dispose() {
-    this.trigger.removeEventListener("click", this.onClick);
+    this.trigger.removeEventListener('click', this.onClick)
   }
 
   /**
@@ -39,31 +39,31 @@ export class Modal {
      */
     const offClick = (e: Event) => {
       if (e !== event) {
-        callback({ open: false });
+        callback({ open: false })
 
-        document.removeEventListener("click", offClick);
-        document.removeEventListener("keydown", escKey);
+        document.removeEventListener('click', offClick)
+        document.removeEventListener('keydown', escKey)
 
-        this.video.removeEventListener("ended", offClick);
+        this.video.removeEventListener('ended', offClick)
       }
-    };
+    }
 
     /**
      * Determine the 'Escape' has been pressed
      */
     const escKey = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") {
-        return;
+      if (e.key !== 'Escape') {
+        return
       }
 
-      offClick(e);
-    };
+      offClick(e)
+    }
 
-    document.addEventListener("click", offClick);
-    document.addEventListener("keydown", escKey);
+    document.addEventListener('click', offClick)
+    document.addEventListener('keydown', escKey)
 
-    this.video.addEventListener("ended", offClick);
-  };
+    this.video.addEventListener('ended', offClick)
+  }
 
   /**
    * Determine what to do when the modal button is clicked
@@ -74,34 +74,34 @@ export class Modal {
      */
     const toggleModal = ({ open = false }: { open?: boolean }) => {
       if (open) {
-        document.body.classList.add("no-scroll");
+        document.body.classList.add('no-scroll')
 
-        this.modal.classList.add("is-visible");
-        this.modal.setAttribute("aria-hidden", "false");
+        this.modal.classList.add('is-visible')
+        this.modal.setAttribute('aria-hidden', 'false')
 
         setTimeout(() => {
-          document.body.classList.add("modal-is-open");
+          document.body.classList.add('modal-is-open')
 
-          this.video.play();
-        }, 25);
+          void this.video.play()
+        }, 25)
       } else {
-        document.body.classList.remove("modal-is-open");
+        document.body.classList.remove('modal-is-open')
 
-        this.video.pause();
+        this.video.pause()
 
         setTimeout(() => {
-          this.modal.setAttribute("aria-hidden", "true");
-          this.modal.classList.remove("is-visible");
+          this.modal.setAttribute('aria-hidden', 'true')
+          this.modal.classList.remove('is-visible')
 
-          document.body.classList.remove("no-scroll");
-        }, 500);
+          document.body.classList.remove('no-scroll')
+        }, 500)
       }
-    };
-
-    if (!document.body.classList.contains("menu-is-open")) {
-      toggleModal({ open: true });
-
-      this.addOffClick(event, toggleModal);
     }
-  };
+
+    if (!document.body.classList.contains('menu-is-open')) {
+      toggleModal({ open: true })
+
+      this.addOffClick(event, toggleModal)
+    }
+  }
 }
